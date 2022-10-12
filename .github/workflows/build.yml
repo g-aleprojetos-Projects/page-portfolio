@@ -39,8 +39,8 @@ jobs:
 
       - name: Build web-app
         run: |
-          npm ci
-          npm run build
+          yarn ci
+          yarn run build
 
       - name: Deploy to qas-pages
         uses: peterjgrainger/action-create-branch@v2.2.0
@@ -65,8 +65,8 @@ jobs:
 
       - name: Build web-app
         run: |
-          npm ci
-          npm run build
+          yarn ci
+          yarn run build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
