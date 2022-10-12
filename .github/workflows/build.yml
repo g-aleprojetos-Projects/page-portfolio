@@ -23,7 +23,7 @@ jobs:
       - name: Run test
         run: yarn run test
 
-    deploy-QAS:
+  deploy-QAS:
     runs-on: ubuntu-latest
     environment:
       name: QAS
@@ -47,7 +47,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
 
-    deploy-PROD:
+  deploy-PROD:
     runs-on: ubuntu-latest
     environment:
       name: PROD
