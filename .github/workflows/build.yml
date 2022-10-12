@@ -41,11 +41,13 @@ jobs:
         run: |
           npm ci
           npm run build
+
       - name: Deploy to qas-pages
-        uses: peaceiris/actions-qas-pages@v3
+        uses: peterjgrainger/action-create-branch@v2.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          branch: 'QAS-Pages'
 
   deploy-PROD:
     runs-on: ubuntu-latest
@@ -65,8 +67,8 @@ jobs:
         run: |
           npm ci
           npm run build
-      - name: Deploy to prod-pages
-        uses: peaceiris/actions-prod-pages@v3
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
