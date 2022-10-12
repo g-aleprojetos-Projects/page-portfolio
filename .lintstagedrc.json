@@ -2,7 +2,6 @@
   "*.{js,jsx,ts,tsx}": [
     "prettier --write",
     "eslint -c .eslintrc.json --fix",
-    "cross-env CI=true yarn test --bail --findRelatedTests",
-    "git add"
+    "cross-env CI=true yarn test --bail --findRelatedTests"
   ]
 }
