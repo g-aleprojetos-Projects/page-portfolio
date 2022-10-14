@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home.styles Container DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Home.styles ContainerContent DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  width: 50%;
+  height: 50%;
+  src: photo.jpg;
+}
+
+<img
+  className="c0"
+  src="photo.jpg"
+/>
+`;
