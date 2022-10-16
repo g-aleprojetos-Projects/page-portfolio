@@ -9,8 +9,12 @@ describe('Home.styles', () => {
     const container = renderer.create(<S.Container />).toJSON();
     expect(container).toMatchSnapshot();
   });
-  test('ContainerContent DEVE ser igual ao snapshot', () => {
-    const containerContent = renderer.create(<S.ContainerContent />).toJSON();
-    expect(containerContent).toMatchSnapshot();
+  test('ContainerImagem DEVE ser igual ao snapshot', () => {
+    const containerImagem = renderer.create(<S.ContainerImagem />).toJSON();
+    expect(containerImagem).toMatchSnapshot();
+  });
+  test('Imagem DEVE ser igual ao snapshot', () => {
+    const imagem = renderer.create(<S.Imagem />).toJSON();
+    expect(imagem).toMatchSnapshot();
   });
 });

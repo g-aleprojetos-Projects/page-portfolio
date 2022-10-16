@@ -4,7 +4,9 @@ import * as S from './home.styles';
 export const Home = () => {
   return (
     <S.Container>
-      <S.ContainerContent />
+      <S.ContainerImagem>
+        <S.Imagem />
+      </S.ContainerImagem>
     </S.Container>
   );
 };
