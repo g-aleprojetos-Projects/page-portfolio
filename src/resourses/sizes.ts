@@ -13,4 +13,5 @@ export default {
   px233: '14.563rem',
   px377: '23.563rem',
   px610: '38.125rem',
+  media_768: '768px',
 };
