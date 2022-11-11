@@ -1,8 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Header.styles Container DEVE ser igual ao snapshot 1`] = `
+exports[`Header.styles Container DEVE ser igual ao snapshot se mobile for igual a "false" 1`] = `
 .c0 {
-  width: 100vw;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
   height: 9rem;
   background-color: #d3d3d3;
 }
@@ -12,14 +16,32 @@ exports[`Header.styles Container DEVE ser igual ao snapshot 1`] = `
 />
 `;
 
+exports[`Header.styles Container DEVE ser igual ao snapshot se mobile for igual a "true" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 9rem;
+  background-color: transparent;
+}
+
+<div
+  className="c0"
+/>
+`;
+
 exports[`Header.styles Content DEVE ser igual ao snapshot 1`] = `
 .c0 {
-  display: grid;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  grid-template-columns: repeat(2,1fr);
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -35,94 +57,12 @@ exports[`Header.styles Content DEVE ser igual ao snapshot 1`] = `
 />
 `;
 
-exports[`Header.styles Flag DEVE ser igual ao snapshot 1`] = `
+exports[`Header.styles Overlay DEVE ser igual ao snapshot se mobile for igual a "false" 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  justify-items: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-<div
-  className="c0"
-/>
-`;
-
-exports[`Header.styles FlagBrasil DEVE ser igual ao snapshot 1`] = `
-.c0 {
-  width: 3.438rem;
-  margin: 0.125rem;
-}
-
-<img
-  alt="Bandeira do Brasil"
-  className="c0"
-  src="flagBrasil.svg"
-/>
-`;
-
-exports[`Header.styles HeaderLeft DEVE ser igual ao snapshot 1`] = `
-.c0 {
-  display: grid;
-  justify-items: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  grid-template-columns: repeat(6,1fr);
-  grid-template-rows: 1.313rem;
-  grid-gap: 0.313rem;
-  margin-right: 1.313rem;
-}
-
-<div
-  className="c0"
-/>
-`;
-
-exports[`Header.styles HeaderRight DEVE ser igual ao snapshot 1`] = `
-.c0 {
-  width: 2.125rem;
-  height: 1.313rem;
-  margin-left: 3.438rem;
-}
-
-<div
-  className="c0"
-/>
-`;
-
-exports[`Header.styles Item DEVE ser igual ao snapshot 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  padding: 0.313rem;
-  margin: 0.313rem;
-  color: #ffffff;
-}
-
-.c0:hover {
-  color: #ff0000;
-}
-
-<div
-  className="c0"
-/>
-`;
-
-exports[`Header.styles Overlay DEVE ser igual ao snapshot 1`] = `
-.c0 {
   position: absolute;
   top: 0;
   left: 0;
@@ -136,9 +76,43 @@ exports[`Header.styles Overlay DEVE ser igual ao snapshot 1`] = `
 />
 `;
 
-exports[`Header.styles Video DEVE ser igual ao snapshot 1`] = `
+exports[`Header.styles Overlay DEVE ser igual ao snapshot se mobile for igual a "true" 1`] = `
 .c0 {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 9rem;
+  background-color: #00000080;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Header.styles Video DEVE ser igual ao snapshot se mobile for igual a "false" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+<video
+  className="c0"
+  src="video.mp4"
+/>
+`;
+
+exports[`Header.styles Video DEVE ser igual ao snapshot se mobile for igual a "true" 1`] = `
+.c0 {
+  display: none;
+  width: 100vw;
   height: 100%;
   object-fit: cover;
 }

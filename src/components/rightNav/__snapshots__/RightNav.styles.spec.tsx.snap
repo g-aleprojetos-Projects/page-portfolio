@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "false"  e se mobile for igual a "false" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  position: static;
+  background-color: transparent;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  top: auto;
+  right: auto;
+  width: auto;
+  height: auto;
+  padding-top: auto;
+  -webkit-transition: none;
+  transition: none;
+}
+
+<ul
+  className="c0"
+  open={false}
+/>
+`;
+
+exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "false"  e se mobile for igual a "true" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  position: fixed;
+  background-color: #00000080;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: auto;
+  padding-top: 3.5rem;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+<ul
+  className="c0"
+  open={false}
+/>
+`;
+
+exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "true" e se mobile for igual a "false" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  position: static;
+  background-color: transparent;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  top: auto;
+  right: auto;
+  width: auto;
+  height: auto;
+  padding-top: auto;
+  -webkit-transition: none;
+  transition: none;
+}
+
+<ul
+  className="c0"
+  open={true}
+/>
+`;
+
+exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "true" e se mobile for igual a "true" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  position: fixed;
+  background-color: #00000080;
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: auto;
+  padding-top: 3.5rem;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+<ul
+  className="c0"
+  open={true}
+/>
+`;
+
+exports[`Hamburger.styles ContainerNav DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 5.563rem;
+  padding-right: 3.438rem;
+}
+
+<nav
+  className="c0"
+/>
+`;
+
+exports[`Hamburger.styles Flag DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Hamburger.styles FlagBrasil DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  width: 3.438rem;
+  margin: 0.125rem;
+}
+
+<img
+  alt="Bandeira do Brasil"
+  className="c0"
+  src="flagBrasil.svg"
+/>
+`;
+
+exports[`Hamburger.styles Item DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 0.313rem 1.313rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.c0:hover {
+  color: #ff0000;
+}
+
+<li
+  className="c0"
+/>
+`;
+
+exports[`Hamburger.styles Menu DEVE ser igual ao snapshot se mobile for igual a "false" 1`] = `
+.c0 {
+  display: none;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  background-color: #00875F;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Hamburger.styles Menu DEVE ser igual ao snapshot se mobile for igual a "true" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  background-color: #00875F;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Hamburger.styles Texto DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  color: #ffffff;
+}
+
+<div
+  className="c0"
+/>
+`;

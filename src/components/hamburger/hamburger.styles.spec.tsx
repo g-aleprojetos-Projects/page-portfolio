@@ -5,32 +5,40 @@ import 'jest-styled-components';
 import * as S from './hamburger.styles';
 
 describe('Hamburger.styles', () => {
-  test('Container DEVE ser igual ao snapshot', () => {
-    const container = renderer.create(<S.Container />).toJSON();
+  test('Container DEVE ser igual ao snapshot se mobile for igual a "true"', () => {
+    const container = renderer.create(<S.Container mobile={true} />).toJSON();
+    expect(container).toMatchSnapshot();
+  });
+  test('Container DEVE ser igual ao snapshot se mobile for igual a "false"', () => {
+    const container = renderer.create(<S.Container mobile={false} />).toJSON();
     expect(container).toMatchSnapshot();
   });
   test('SpanSuperior DEVE ser igual ao snapshot', () => {
-    const container = renderer.create(<S.SpanSuperior />).toJSON();
-    expect(container).toMatchSnapshot();
+    const spanSuperior = renderer.create(<S.SpanSuperior />).toJSON();
+    expect(spanSuperior).toMatchSnapshot();
   });
   test('SpanSuperior DEVE ser igual ao snapshot QUANDO "open" for "true"', () => {
-    const container = renderer.create(<S.SpanSuperior open={true} />).toJSON();
-    expect(container).toMatchSnapshot();
+    const spanSuperior = renderer
+      .create(<S.SpanSuperior open={true} />)
+      .toJSON();
+    expect(spanSuperior).toMatchSnapshot();
   });
   test('SpanMeio DEVE ser igual ao snapshot', () => {
-    const container = renderer.create(<S.SpanMeio />).toJSON();
-    expect(container).toMatchSnapshot();
+    const spanMeio = renderer.create(<S.SpanMeio />).toJSON();
+    expect(spanMeio).toMatchSnapshot();
   });
   test('SpanMeio DEVE ser igual ao snapshot QUANDO "open" for "true"', () => {
-    const container = renderer.create(<S.SpanMeio open={true} />).toJSON();
-    expect(container).toMatchSnapshot();
+    const spanMeio = renderer.create(<S.SpanMeio open={true} />).toJSON();
+    expect(spanMeio).toMatchSnapshot();
   });
   test('SpanInferior DEVE ser igual ao snapshot', () => {
-    const container = renderer.create(<S.SpanInferior />).toJSON();
-    expect(container).toMatchSnapshot();
+    const spanInferior = renderer.create(<S.SpanInferior />).toJSON();
+    expect(spanInferior).toMatchSnapshot();
   });
   test('SpanInferior DEVE ser igual ao snapshot QUANDO "open" for "true"', () => {
-    const container = renderer.create(<S.SpanInferior open={true} />).toJSON();
-    expect(container).toMatchSnapshot();
+    const spanInferior = renderer
+      .create(<S.SpanInferior open={true} />)
+      .toJSON();
+    expect(spanInferior).toMatchSnapshot();
   });
 });

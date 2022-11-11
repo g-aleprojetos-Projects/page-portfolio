@@ -14,5 +14,9 @@ describe('Hender', () => {
       const header = componente.getByTestId('test_home');
       expect(header).toBeDefined();
     });
+    test(`DEVE renderizar o componente Header`, async () => {
+      const header = componente.getByTestId('test_header');
+      expect(header).toBeDefined();
+    });
   });
 });
