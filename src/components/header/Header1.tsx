@@ -1,7 +1,7 @@
 import React from 'react';
 import {Nav} from 'components/nav';
 import {useResponsiveContext} from 'context/mobileWindow';
-import * as S from './Header.styles';
+import * as S from './Header1.styles';
 
 export const Header = () => {
   const {mobile} = useResponsiveContext();

@@ -1,6 +1,6 @@
 import React from 'react';
 import {render, RenderResult} from '@testing-library/react';
-import {Header} from './Header';
+import {Header} from './Header1';
 import {useResponsiveContext} from 'context/mobileWindow';
 
 jest.mock('context/mobileWindow');

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Home.styles Container DEVE ser igual ao snapshot 1`] = `
+exports[`Home.styles Container DEVE ser igual ao snapshot passando false em "on" 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -15,10 +15,35 @@ exports[`Home.styles Container DEVE ser igual ao snapshot 1`] = `
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #202024;
+  background-color: #d3d3d3;
 }
 
 <div
   className="c0"
+  on={false}
+/>
+`;
+
+exports[`Home.styles Container DEVE ser igual ao snapshot passando true em "on" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #360033;
+}
+
+<div
+  className="c0"
+  on={true}
 />
 `;
