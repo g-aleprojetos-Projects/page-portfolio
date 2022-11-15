@@ -37,8 +37,8 @@ describe('Hender', () => {
       const sobre = componente.getByText('Sobre');
       expect(sobre).toBeDefined();
     });
-    test(`DEVE renderizar o componente com o texto "ToggleSwitch"`, () => {
-      const toggleSwitch = componente.getByText('ToggleSwitch');
+    test(`DEVE renderizar o componente com o componente "ToggleSwitch"`, () => {
+      const toggleSwitch = componente.getByTestId('test_togleSwitch');
       expect(toggleSwitch).toBeDefined();
     });
     test(`DEVE renderizar o componente com a bandeira do "Brasil"`, () => {

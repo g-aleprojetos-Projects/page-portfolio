@@ -1,10 +1,14 @@
+import React, {useState} from 'react';
 import {useResponsiveContext} from 'context/mobileWindow';
-import React from 'react';
 import * as S from './RightNav.styles';
+import {ToggleSwitch} from 'components/toggleSwitch';
 
 export const RightNav = (props: S.PropsRightNav) => {
   const {open} = props;
   const {mobile} = useResponsiveContext();
+  const [on, setOn] = useState(false);
+  const handleToggle = () => setOn(prev => !prev);
+
   return (
     <S.ContainerNav data-testid={'test_rightNav'}>
       <S.ContainerContent
@@ -18,7 +22,9 @@ export const RightNav = (props: S.PropsRightNav) => {
         <S.Item>Skills</S.Item>
         <S.Item>Projetos</S.Item>
         <S.Item>Sobre</S.Item>
-        <S.Item data-testid={'test_toggle'}>ToggleSwitch</S.Item>
+        <S.Item data-testid={'test_toggle'}>
+          <ToggleSwitch isOn={on} handleOnclick={handleToggle} />
+        </S.Item>
         <S.Flag>
           <S.FlagBrasil data-testid={'test_flag_Brasil'} />
         </S.Flag>
