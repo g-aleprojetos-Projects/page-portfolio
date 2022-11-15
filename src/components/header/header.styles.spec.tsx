@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import '@testing-library/jest-dom/extend-expect';
 import 'jest-styled-components';
-import * as S from './Header1.styles';
+import * as S from './Header.styles';
 
 describe('Header.styles', () => {
   test('Container DEVE ser igual ao snapshot se mobile for igual a "true"', () => {
