@@ -9,30 +9,87 @@ describe('Hamburger.styles', () => {
     const containerNav = renderer.create(<S.ContainerNav />).toJSON();
     expect(containerNav).toMatchSnapshot();
   });
-  test('ContainerContent DEVE ser igual ao snapshot com open passado como "true" e se mobile for igual a "true"', () => {
+  test('ContainerContent DEVE ser igual ao snapshot com open passado como "false", mobile for igual a "false" e backgroundDark for "false" ', () => {
     const containerContent = renderer
-      .create(<S.ContainerContent open={true} mobile={true} />)
+      .create(
+        <S.ContainerContent
+          open={false}
+          mobile={false}
+          backgroundDark={false}
+        />,
+      )
       .toJSON();
     expect(containerContent).toMatchSnapshot();
   });
-  test('ContainerContent DEVE ser igual ao snapshot com open passado como "true" e se mobile for igual a "false"', () => {
+  test('ContainerContent DEVE ser igual ao snapshot com open passado como "false", mobile for igual a "false" e backgroundDark for "true"', () => {
     const containerContent = renderer
-      .create(<S.ContainerContent open={true} mobile={false} />)
+      .create(
+        <S.ContainerContent
+          open={false}
+          mobile={false}
+          backgroundDark={true}
+        />,
+      )
       .toJSON();
     expect(containerContent).toMatchSnapshot();
   });
-  test('ContainerContent DEVE ser igual ao snapshot com open passado como "false"  e se mobile for igual a "true"', () => {
+  test('ContainerContent DEVE ser igual ao snapshot com open passado como "false", mobile for igual a "true" e backgroundDark for "false"', () => {
     const containerContent = renderer
-      .create(<S.ContainerContent open={false} mobile={true} />)
+      .create(
+        <S.ContainerContent
+          open={false}
+          mobile={true}
+          backgroundDark={false}
+        />,
+      )
       .toJSON();
     expect(containerContent).toMatchSnapshot();
   });
-  test('ContainerContent DEVE ser igual ao snapshot com open passado como "false"  e se mobile for igual a "false"', () => {
+  test('ContainerContent DEVE ser igual ao snapshot com open passado como "false", mobile for igual a "true" e for backgroundDark for "true" ', () => {
     const containerContent = renderer
-      .create(<S.ContainerContent open={false} mobile={false} />)
+      .create(
+        <S.ContainerContent open={false} mobile={true} backgroundDark={true} />,
+      )
       .toJSON();
     expect(containerContent).toMatchSnapshot();
   });
+  test('ContainerContent DEVE ser igual ao snapshot com open passado como "true", mobile for igual a "false" e for backgroundDark for "false" ', () => {
+    const containerContent = renderer
+      .create(
+        <S.ContainerContent
+          open={true}
+          mobile={false}
+          backgroundDark={false}
+        />,
+      )
+      .toJSON();
+    expect(containerContent).toMatchSnapshot();
+  });
+  test('ContainerContent DEVE ser igual ao snapshot com open passado como "true", mobile for igual a "false" e for backgroundDark for "true" ', () => {
+    const containerContent = renderer
+      .create(
+        <S.ContainerContent open={true} mobile={false} backgroundDark={true} />,
+      )
+      .toJSON();
+    expect(containerContent).toMatchSnapshot();
+  });
+  test('ContainerContent DEVE ser igual ao snapshot com open passado como "true", mobile for igual a "true" e for backgroundDark for "false" ', () => {
+    const containerContent = renderer
+      .create(
+        <S.ContainerContent open={true} mobile={true} backgroundDark={false} />,
+      )
+      .toJSON();
+    expect(containerContent).toMatchSnapshot();
+  });
+  test('ContainerContent DEVE ser igual ao snapshot com open passado como "true", mobile for igual a "true" e for backgroundDark for "true" ', () => {
+    const containerContent = renderer
+      .create(
+        <S.ContainerContent open={true} mobile={true} backgroundDark={true} />,
+      )
+      .toJSON();
+    expect(containerContent).toMatchSnapshot();
+  });
+
   test('Texto DEVE ser igual ao snapshot', () => {
     const texto = renderer.create(<S.Texto />).toJSON();
     expect(texto).toMatchSnapshot();

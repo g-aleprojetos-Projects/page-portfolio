@@ -6,6 +6,7 @@ import flagBrasil from 'assets/icon/flagBrasil.svg';
 export interface PropsRightNav {
   open?: boolean;
   mobile?: boolean;
+  backgroundDark?: boolean;
 }
 
 export const ContainerNav = styled.nav`
@@ -22,7 +23,11 @@ export const ContainerContent = styled.ul<PropsRightNav>`
   flex-flow: ${props => (props.mobile ? 'column nowrap' : 'row nowrap')};
   position: ${props => (props.mobile ? 'fixed' : 'static')};
   background-color: ${props =>
-    props.mobile ? colors.black50per : 'transparent'};
+    props.mobile
+      ? props.backgroundDark
+        ? colors.black50per
+        : colors.black
+      : 'transparent'};
   transform: ${props =>
     props.mobile
       ? props.open
