@@ -1,31 +1,15 @@
 import styled from 'styled-components';
-import manutencao from './../../assets/image/photo.jpg';
+import colors from 'resourses/colors';
 
-export const Container = styled.div`
+export interface Props {
+  on: boolean;
+}
+
+export const Container = styled.div<Props>`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: black;
+  background-color: ${props => (props.on ? colors.magenta : colors.lightgray)};
 `;
-
-export const ContainerImagem = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90vw;
-  height: auto;
-  padding: 1rem;
-`;
-
-export const Imagem = styled.img`
-  width: 85%;
-  height: auto;
-  src: ${manutencao};
-`;
-
-Imagem.defaultProps = {
-  src: manutencao,
-  alt: 'Imagem de site em manutenção',
-};
