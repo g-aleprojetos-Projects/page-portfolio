@@ -17,9 +17,15 @@ describe('Hamburger.styles', () => {
     const spanSuperior = renderer.create(<S.SpanSuperior />).toJSON();
     expect(spanSuperior).toMatchSnapshot();
   });
-  test('SpanSuperior DEVE ser igual ao snapshot QUANDO "open" for "true"', () => {
+  test('SpanSuperior DEVE ser igual ao snapshot QUANDO "open" for "true" e "backgroumdDark" for false', () => {
     const spanSuperior = renderer
-      .create(<S.SpanSuperior open={true} />)
+      .create(<S.SpanSuperior open={true} backgroumdDark={false} />)
+      .toJSON();
+    expect(spanSuperior).toMatchSnapshot();
+  });
+  test('SpanSuperior DEVE ser igual ao snapshot QUANDO "open" for "true" e "backgroumdDark" for true', () => {
+    const spanSuperior = renderer
+      .create(<S.SpanSuperior open={true} backgroumdDark={true} />)
       .toJSON();
     expect(spanSuperior).toMatchSnapshot();
   });
@@ -27,17 +33,31 @@ describe('Hamburger.styles', () => {
     const spanMeio = renderer.create(<S.SpanMeio />).toJSON();
     expect(spanMeio).toMatchSnapshot();
   });
-  test('SpanMeio DEVE ser igual ao snapshot QUANDO "open" for "true"', () => {
-    const spanMeio = renderer.create(<S.SpanMeio open={true} />).toJSON();
+  test('SpanMeio DEVE ser igual ao snapshot QUANDO "open" for "true" e "backgroumdDark" for false', () => {
+    const spanMeio = renderer
+      .create(<S.SpanMeio open={true} backgroumdDark={false} />)
+      .toJSON();
+    expect(spanMeio).toMatchSnapshot();
+  });
+  test('SpanMeio DEVE ser igual ao snapshot QUANDO "open" for "true" e "backgroumdDark" for true', () => {
+    const spanMeio = renderer
+      .create(<S.SpanMeio open={true} backgroumdDark={true} />)
+      .toJSON();
     expect(spanMeio).toMatchSnapshot();
   });
   test('SpanInferior DEVE ser igual ao snapshot', () => {
     const spanInferior = renderer.create(<S.SpanInferior />).toJSON();
     expect(spanInferior).toMatchSnapshot();
   });
-  test('SpanInferior DEVE ser igual ao snapshot QUANDO "open" for "true"', () => {
+  test('SpanInferior DEVE ser igual ao snapshot QUANDO "open" for "true" e "backgroumdDark" for "false"', () => {
     const spanInferior = renderer
-      .create(<S.SpanInferior open={true} />)
+      .create(<S.SpanInferior open={true} backgroumdDark={false} />)
+      .toJSON();
+    expect(spanInferior).toMatchSnapshot();
+  });
+  test('SpanInferior DEVE ser igual ao snapshot QUANDO "open" for "true" e "backgroumdDark" for "true"', () => {
+    const spanInferior = renderer
+      .create(<S.SpanInferior open={true} backgroumdDark={true} />)
       .toJSON();
     expect(spanInferior).toMatchSnapshot();
   });

@@ -1,20 +1,21 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {useResponsiveContext} from 'context/mobileWindow';
-import * as S from './RightNav.styles';
+import {useBackgroundContext} from 'context/backgroud';
 import {ToggleSwitch} from 'components/toggleSwitch';
+import * as S from './RightNav.styles';
 
 export const RightNav = (props: S.PropsRightNav) => {
   const {open} = props;
   const {mobile} = useResponsiveContext();
-  const [on, setOn] = useState(false);
-  const handleToggle = () => setOn(prev => !prev);
+  const {on, handleToggle} = useBackgroundContext();
 
   return (
     <S.ContainerNav data-testid={'test_rightNav'}>
       <S.ContainerContent
         data-testid={'test_containerContent'}
         open={open}
-        mobile={mobile}>
+        mobile={mobile}
+        backgroundDark={on}>
         <S.Menu data-testid={'test_menu'} mobile={mobile}>
           <S.Texto>Menu</S.Texto>
         </S.Menu>
