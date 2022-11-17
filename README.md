@@ -1,51 +1,52 @@
-# Criação do projeto
- ### `yarn create react-app page-portifolio --template typescript`
+<H1 align="center">Portifolio</H1>
 
- [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
+## Setup
 
-# Getting Started with Create React App
+- Ferramentas necessárias:
+  - Visual Studio Code
+  - Git
+  - yarn (1.22.18)
+  - React (18.2.0)
+  - Typescript
+  - Prettier (plugin do VSCode recomendado)
+  - ESLint (plugin do VSCode recomendado)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Políticas de Código
 
-## Available Scripts
+[Políticas e padrões de código](./docs/padroes-de-codigo.md)
 
-In the project directory, you can run:
+## Executar o projeto na máquina local
 
-### `yarn start`
+```shell
+yarn start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Executando teste
+- Para rodar os testes, executar o comando:
+```shell
+yarn test
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- Para atualizar os snapshots, executar o comando:
+```shell
+yarn test -u
+```
 
-### `yarn test`
+## Branches
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+As branches principais são:
 
-### `yarn build`
+- **main**
+- **develop**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Regras para novos desenvolvimentos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- _feature/[nome-da-feature]/main_ - Para trabalhos relacionados a uma estória, derivar a branch a partir da **develop** com nome relacionado (Ex.: \*\*feature/tela-selecionar-local/main)
+- _feature/[nome-da-feature]-[nome-da-tarefa]_ Para trabalhos relacionados a uma tarefa, derivar a branch a partir da **feature branch**, com nome relacionado (Ex.: _feature/tela-selecionar-local/configurar-api_)
+- _hotfix/[nome-da-correcao]_ - Para trabalhos relacionados à correção de um bug/problema em produção, derivar a branch a partir da **main** com nome relacionado (Ex.: _hotfix/correcao-filtro-locais_)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Observações
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Após integrar uma branch de **hotfix** na branch **main**, sempre integrá-la também na branch **develop**
+- O time poderá sugerir mudanças nessas regras periodicamente
+- Em casos específicos, o time pode decidir utilizar uma regra diferente que mais se atende à necessidade
