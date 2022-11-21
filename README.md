@@ -1,5 +1,12 @@
 <H1 align="center">Portifolio</H1>
 
+<div align="center">
+
+ [![Coverage Status](https://coveralls.io/repos/github/g-aleprojetos-Projects/page-portfolio/badge.svg)](https://coveralls.io/github/g-aleprojetos-Projects/page-portfolio)
+ [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
+
+</div>
+
 ## Setup
 
 - Ferramentas necessárias:
@@ -50,3 +57,72 @@ As branches principais são:
 - Após integrar uma branch de **hotfix** na branch **main**, sempre integrá-la também na branch **develop**
 - O time poderá sugerir mudanças nessas regras periodicamente
 - Em casos específicos, o time pode decidir utilizar uma regra diferente que mais se atende à necessidade
+
+### Clonar projeto
+
+```shell
+git clone https://github.com/g-aleprojetos-Projects/page-portfolio.git
+```
+
+### Commit
+
+```shell
+yarn run commit
+```
+<div style="background: black; padding: 12px;">
+<h3>Deve escolher qual tipo vai ser o commit:</h3>
+</br>
+<p align="center" >
+  <a href="https://unform.dev">
+    <img src="docs/imagem/imagem1.png" alt="Imagem do terminal começando commit" />
+  </a>
+</p>
+</div>
+
+<div style="background: black; padding: 12px; margin-top: 10px;">
+<h3>Deve teclar enter no "scope":</h3>
+</br>
+<p align="center" >
+  <a href="https://unform.dev">
+    <img src="docs/imagem/imagem2.png" alt="Imagem do terminal começando commit" />
+  </a>
+</p>
+</div>
+
+<div style="background: black; padding: 12px; margin-top: 10px;">
+<h3>Deve preencher a mensagem do commit:</h3>
+</br>
+<p align="center" >
+  <a href="https://unform.dev">
+    <img src="docs/imagem/imagem3.png" alt="Imagem do terminal começando commit" />
+  </a>
+</p>
+</div>
+
+<div style="background: black; padding: 12px; margin-top: 10px;">
+<h3>No próximo deve preencher a descrição ou techar enter para passar:</h3>
+</br>
+<p align="center" >
+  <a href="https://unform.dev">
+    <img src="docs/imagem/imagem4.png" alt="Imagem do terminal começando commit" />
+  </a>
+</p>
+</div>
+
+<div style="background: black; padding: 12px; margin-top: 10px;">
+<h3>Nos dois últimos deve responder "N" para completar o commit:</h3>
+</br>
+<p align="center" >
+  <a href="https://unform.dev">
+    <img src="docs/imagem/imagem5.png" alt="Imagem do terminal começando commit" />
+  </a>
+</p>
+</div>
+
+### Observações
+
+- Após rodar os teste e não tiver problemas completar com :
+
+```shell
+git push
+```
