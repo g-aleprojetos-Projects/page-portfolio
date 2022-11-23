@@ -21,21 +21,46 @@ describe('Hender', () => {
       const menu = componente.getByText('Menu');
       expect(menu).toBeDefined();
     });
+    test(`DEVE renderizar o componente com o texto "Menu" com font-family igual "AvertaStd-Regular" `, () => {
+      const menu = componente.getByText('Menu');
+      const style = window.getComputedStyle(menu);
+      expect(style.fontFamily).toEqual('AvertaStd-Regular');
+    });
     test(`DEVE renderizar o componente com o texto "Home"`, () => {
       const home = componente.getByText('Home');
       expect(home).toBeDefined();
+    });
+    test(`DEVE renderizar o componente com o texto "Home" com font-family igual "AvertaStd-Regular" `, () => {
+      const home = componente.getByText('Home');
+      const style = window.getComputedStyle(home);
+      expect(style.fontFamily).toEqual('AvertaStd-Regular');
     });
     test(`DEVE renderizar o componente com o texto "Skills"`, () => {
       const skills = componente.getByText('Skills');
       expect(skills).toBeDefined();
     });
+    test(`DEVE renderizar o componente com o texto "Skills" com font-family igual "AvertaStd-Regular" `, () => {
+      const skills = componente.getByText('Skills');
+      const style = window.getComputedStyle(skills);
+      expect(style.fontFamily).toEqual('AvertaStd-Regular');
+    });
     test(`DEVE renderizar o componente com o texto "Projetos"`, () => {
       const projetos = componente.getByText('Projetos');
       expect(projetos).toBeDefined();
     });
+    test(`DEVE renderizar o componente com o texto "Projetos" com font-family igual "AvertaStd-Regular" `, () => {
+      const projetos = componente.getByText('Projetos');
+      const style = window.getComputedStyle(projetos);
+      expect(style.fontFamily).toEqual('AvertaStd-Regular');
+    });
     test(`DEVE renderizar o componente com o texto "Sobre"`, () => {
       const sobre = componente.getByText('Sobre');
       expect(sobre).toBeDefined();
+    });
+    test(`DEVE renderizar o componente com o texto "Sobre" com font-family igual "AvertaStd-Regular" `, () => {
+      const sobre = componente.getByText('Sobre');
+      const style = window.getComputedStyle(sobre);
+      expect(style.fontFamily).toEqual('AvertaStd-Regular');
     });
     test(`DEVE renderizar o componente com o componente "ToggleSwitch"`, () => {
       const toggleSwitch = componente.getByTestId('test_togleSwitch');
