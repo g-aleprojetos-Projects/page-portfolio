@@ -3,6 +3,7 @@ import {useResponsiveContext} from 'context/mobileWindow';
 import {useBackgroundContext} from 'context/backgroud';
 import {ToggleSwitch} from 'components/toggleSwitch';
 import * as S from './RightNav.styles';
+import {TextoSmall} from 'components/texto';
 
 export const RightNav = (props: S.PropsRightNav) => {
   const {open} = props;
@@ -17,12 +18,22 @@ export const RightNav = (props: S.PropsRightNav) => {
         mobile={mobile}
         backgroundDark={on}>
         <S.Menu data-testid={'test_menu'} mobile={mobile}>
-          <S.Texto>Menu</S.Texto>
+          <S.Texto>
+            <TextoSmall>Menu</TextoSmall>
+          </S.Texto>
         </S.Menu>
-        <S.Item>Home</S.Item>
-        <S.Item>Skills</S.Item>
-        <S.Item>Projetos</S.Item>
-        <S.Item>Sobre</S.Item>
+        <S.Item>
+          <TextoSmall cursor="pointer">Home</TextoSmall>
+        </S.Item>
+        <S.Item>
+          <TextoSmall cursor="pointer">Skills</TextoSmall>
+        </S.Item>
+        <S.Item>
+          <TextoSmall cursor="pointer">Projetos</TextoSmall>
+        </S.Item>
+        <S.Item>
+          <TextoSmall cursor="pointer">Sobre</TextoSmall>
+        </S.Item>
         <S.Item data-testid={'test_toggle'}>
           <ToggleSwitch isOn={on} handleOnclick={handleToggle} />
         </S.Item>
