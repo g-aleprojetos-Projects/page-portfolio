@@ -4,10 +4,18 @@ import colors from 'resourses/colors';
 import flagBrasil from 'assets/icon/flagBrasil.svg';
 
 export interface PropsRightNav {
-  open?: boolean;
+  openRightNav?: boolean;
   mobile?: boolean;
   backgroundDark?: boolean;
 }
+
+export const Container = styled.div`
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+`;
 
 export const ContainerNav = styled.nav`
   display: flex;
@@ -22,21 +30,16 @@ export const ContainerContent = styled.ul<PropsRightNav>`
   align-items: center;
   flex-flow: ${props => (props.mobile ? 'column nowrap' : 'row nowrap')};
   position: ${props => (props.mobile ? 'fixed' : 'static')};
-  background-color: ${props =>
-    props.mobile
-      ? props.backgroundDark
-        ? colors.black50per
-        : colors.black
-      : 'transparent'};
+  background-color: ${props => (props.mobile ? colors.black : 'transparent')};
   transform: ${props =>
     props.mobile
-      ? props.open
+      ? props.openRightNav
         ? 'translateX(0)'
         : 'translateX(100%)'
       : 'none'};
   top: ${props => (props.mobile ? '0' : 'auto')};
   right: ${props => (props.mobile ? '0' : 'auto')};
-  width: ${props => (props.mobile ? '250px' : 'auto')};
+  width: ${props => (props.mobile ? '100vw' : 'auto')};
   height: auto;
   padding-top: ${props => (props.mobile ? '3.5rem' : 'auto')};
   transition: ${props =>
@@ -57,16 +60,19 @@ export const Menu = styled.div<PropsRightNav>`
   background-color: ${colors.tropicalRainForest};
 `;
 
-export const Item = styled.li`
+export const Item = styled.li<PropsRightNav>`
   display: flex;
   justify-content: center;
-  padding: ${sizes.px8};
+  padding: ${props => (props.mobile ? `${sizes.px8} 0` : sizes.px8)};
   margin: ${sizes.px5} ${sizes.px21};
   color: ${colors.white};
   cursor: pointer;
+`;
 
+export const ItemNav = styled(Item)`
+  width: 80%;
   :hover {
-    color: ${colors.red};
+    background-color: ${props => (props.mobile ? colors.blueMagenta : 'none')};
   }
 `;
 export const Flag = styled.div`

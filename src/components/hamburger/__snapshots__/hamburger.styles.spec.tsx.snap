@@ -14,7 +14,7 @@ exports[`Hamburger.styles Container DEVE ser igual ao snapshot se mobile for igu
   width: 2.125rem;
   height: 2.125rem;
   right: 0;
-  margin-right: 0.813rem;
+  margin-right: 2.125rem;
   margin-top: 40px;
   border: none;
   outline: none;
@@ -45,7 +45,7 @@ exports[`Hamburger.styles Container DEVE ser igual ao snapshot se mobile for igu
   width: 2.125rem;
   height: 2.125rem;
   right: 0;
-  margin-right: 0.813rem;
+  margin-right: 2.125rem;
   margin-top: 40px;
   border: none;
   outline: none;

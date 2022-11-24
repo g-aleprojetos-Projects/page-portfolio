@@ -1,7 +1,7 @@
 import React, {createContext, ReactNode, useContext, useState} from 'react';
 
 type BackgroundContext = {
-  on: boolean;
+  background: boolean;
   handleToggle: () => void;
 };
 
@@ -12,12 +12,12 @@ type BackgroundProvider = {
 const BackgroundContext = createContext({} as BackgroundContext);
 
 export const BackgroundProvide = ({children}: BackgroundProvider) => {
-  const [on, setOn] = useState(false);
+  const [background, setBackground] = useState(false);
 
-  const handleToggle = () => setOn(prev => !prev);
+  const handleToggle = () => setBackground(prev => !prev);
 
   return (
-    <BackgroundContext.Provider value={{on, handleToggle}}>
+    <BackgroundContext.Provider value={{background, handleToggle}}>
       {children}
     </BackgroundContext.Provider>
   );

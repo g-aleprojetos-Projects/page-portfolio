@@ -13,7 +13,7 @@ describe('Hamburger.styles', () => {
     const containerContent = renderer
       .create(
         <S.ContainerContent
-          open={false}
+          openRightNav={false}
           mobile={false}
           backgroundDark={false}
         />,
@@ -25,7 +25,7 @@ describe('Hamburger.styles', () => {
     const containerContent = renderer
       .create(
         <S.ContainerContent
-          open={false}
+          openRightNav={false}
           mobile={false}
           backgroundDark={true}
         />,
@@ -37,7 +37,7 @@ describe('Hamburger.styles', () => {
     const containerContent = renderer
       .create(
         <S.ContainerContent
-          open={false}
+          openRightNav={false}
           mobile={true}
           backgroundDark={false}
         />,
@@ -48,7 +48,11 @@ describe('Hamburger.styles', () => {
   test('ContainerContent DEVE ser igual ao snapshot com open passado como "false", mobile for igual a "true" e for backgroundDark for "true" ', () => {
     const containerContent = renderer
       .create(
-        <S.ContainerContent open={false} mobile={true} backgroundDark={true} />,
+        <S.ContainerContent
+          openRightNav={false}
+          mobile={true}
+          backgroundDark={true}
+        />,
       )
       .toJSON();
     expect(containerContent).toMatchSnapshot();
@@ -57,7 +61,7 @@ describe('Hamburger.styles', () => {
     const containerContent = renderer
       .create(
         <S.ContainerContent
-          open={true}
+          openRightNav={true}
           mobile={false}
           backgroundDark={false}
         />,
@@ -68,7 +72,11 @@ describe('Hamburger.styles', () => {
   test('ContainerContent DEVE ser igual ao snapshot com open passado como "true", mobile for igual a "false" e for backgroundDark for "true" ', () => {
     const containerContent = renderer
       .create(
-        <S.ContainerContent open={true} mobile={false} backgroundDark={true} />,
+        <S.ContainerContent
+          openRightNav={true}
+          mobile={false}
+          backgroundDark={true}
+        />,
       )
       .toJSON();
     expect(containerContent).toMatchSnapshot();
@@ -76,7 +84,11 @@ describe('Hamburger.styles', () => {
   test('ContainerContent DEVE ser igual ao snapshot com open passado como "true", mobile for igual a "true" e for backgroundDark for "false" ', () => {
     const containerContent = renderer
       .create(
-        <S.ContainerContent open={true} mobile={true} backgroundDark={false} />,
+        <S.ContainerContent
+          openRightNav={true}
+          mobile={true}
+          backgroundDark={false}
+        />,
       )
       .toJSON();
     expect(containerContent).toMatchSnapshot();
@@ -84,7 +96,11 @@ describe('Hamburger.styles', () => {
   test('ContainerContent DEVE ser igual ao snapshot com open passado como "true", mobile for igual a "true" e for backgroundDark for "true" ', () => {
     const containerContent = renderer
       .create(
-        <S.ContainerContent open={true} mobile={true} backgroundDark={true} />,
+        <S.ContainerContent
+          openRightNav={true}
+          mobile={true}
+          backgroundDark={true}
+        />,
       )
       .toJSON();
     expect(containerContent).toMatchSnapshot();

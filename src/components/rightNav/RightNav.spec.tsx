@@ -1,5 +1,5 @@
 import React from 'react';
-import {render, RenderResult} from '@testing-library/react';
+import {fireEvent, render, RenderResult} from '@testing-library/react';
 import {RightNav} from './RightNav';
 import {useResponsiveContext} from 'context/mobileWindow';
 
@@ -9,11 +9,14 @@ const mockedUseResponsiveContext = useResponsiveContext as jest.Mock;
 
 describe('Hender', () => {
   let componente: RenderResult;
+  const aoClicarMock = jest.fn();
 
   beforeEach(() => {
     mockedUseResponsiveContext.mockClear();
     mockedUseResponsiveContext.mockImplementation(() => ({mobile: false}));
-    componente = render(<RightNav open={true} />);
+    componente = render(
+      <RightNav openRightNav={true} mudarEstado={aoClicarMock} />,
+    );
   });
 
   describe('Renderização', () => {
@@ -74,13 +77,94 @@ describe('Hender', () => {
       beforeEach(() => {
         mockedUseResponsiveContext.mockClear();
         mockedUseResponsiveContext.mockImplementation(() => ({mobile: true}));
-        componente.rerender(<RightNav open={true} />);
+        componente.rerender(
+          <RightNav openRightNav={true} mudarEstado={aoClicarMock} />,
+        );
       });
 
       test(`DEVE renderizar com o "position" do ContainerContent como fixed`, () => {
         const container = componente.getByTestId('test_containerContent');
         const style = window.getComputedStyle(container);
         expect(style.position).toEqual('fixed');
+      });
+
+      test(`NÃO DEVE renderizar o RightNav Quando "openRightNav" for false`, () => {
+        mockedUseResponsiveContext.mockClear();
+        mockedUseResponsiveContext.mockImplementation(() => ({mobile: true}));
+        componente.rerender(
+          <RightNav openRightNav={false} mudarEstado={aoClicarMock} />,
+        );
+        const container = componente.getByTestId('test_containerContent');
+        const style = window.getComputedStyle(container);
+        expect(style.transform).toEqual('translateX(100%)');
+      });
+    });
+    describe('Comportamento', () => {
+      test(`DEVE chamar a função QUANDO clicar no "Home" no menu da navegação`, () => {
+        const home = componente.getByText('Home');
+
+        fireEvent.click(home);
+
+        expect(aoClicarMock).toBeCalled();
+      });
+      test(`DEVE chamar a função QUANDO clicar no "Skills" no menu da navegação`, () => {
+        const skills = componente.getByText('Skills');
+
+        fireEvent.click(skills);
+
+        expect(aoClicarMock).toBeCalled();
+      });
+      test(`DEVE chamar a função QUANDO clicar no "Projetos" no menu da navegação`, () => {
+        const projetos = componente.getByText('Projetos');
+
+        fireEvent.click(projetos);
+
+        expect(aoClicarMock).toBeCalled();
+      });
+      test(`DEVE chamar a função QUANDO clicar no "Sobre" no menu da navegação`, () => {
+        const sobre = componente.getByText('Sobre');
+
+        fireEvent.click(sobre);
+
+        expect(aoClicarMock).toBeCalled();
+      });
+
+      describe('Comportamento na tela 768px', () => {
+        beforeEach(() => {
+          mockedUseResponsiveContext.mockClear();
+          mockedUseResponsiveContext.mockImplementation(() => ({mobile: true}));
+          componente.rerender(
+            <RightNav openRightNav={true} mudarEstado={aoClicarMock} />,
+          );
+        });
+        test(`DEVE chamar a função QUANDO clicar no "Home" no menu da navegação`, () => {
+          const home = componente.getByText('Home');
+
+          fireEvent.click(home);
+
+          expect(aoClicarMock).toBeCalled();
+        });
+        test(`DEVE chamar a função QUANDO clicar no "Skills" no menu da navegação`, () => {
+          const skills = componente.getByText('Skills');
+
+          fireEvent.click(skills);
+
+          expect(aoClicarMock).toBeCalled();
+        });
+        test(`DEVE chamar a função QUANDO clicar no "Projetos" no menu da navegação`, () => {
+          const projetos = componente.getByText('Projetos');
+
+          fireEvent.click(projetos);
+
+          expect(aoClicarMock).toBeCalled();
+        });
+        test(`DEVE chamar a função QUANDO clicar no "Sobre" no menu da navegação`, () => {
+          const sobre = componente.getByText('Sobre');
+
+          fireEvent.click(sobre);
+
+          expect(aoClicarMock).toBeCalled();
+        });
       });
     });
   });

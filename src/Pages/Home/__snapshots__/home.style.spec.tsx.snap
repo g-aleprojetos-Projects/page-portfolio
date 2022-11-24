@@ -20,7 +20,6 @@ exports[`Home.styles Container DEVE ser igual ao snapshot passando false em "on"
 
 <div
   className="c0"
-  on={false}
 />
 `;
 
@@ -44,6 +43,5 @@ exports[`Home.styles Container DEVE ser igual ao snapshot passando true em "on" 
 
 <div
   className="c0"
-  on={true}
 />
 `;
