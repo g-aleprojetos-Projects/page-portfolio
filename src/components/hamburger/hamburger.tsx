@@ -10,7 +10,7 @@ export interface PropsHumburger {
 
 export const Hamburger = (props: PropsHumburger) => {
   const {mobile} = useResponsiveContext();
-  const {on} = useBackgroundContext();
+  const {background} = useBackgroundContext();
   const {openMenu = false, mudarEstado} = props;
 
   return (
@@ -18,9 +18,9 @@ export const Hamburger = (props: PropsHumburger) => {
       data-testid={'test_hamburger'}
       onClick={mudarEstado}
       mobile={mobile}>
-      <S.SpanSuperior open={openMenu} backgroumdDark={on} />
-      <S.SpanMeio open={openMenu} backgroumdDark={on} />
-      <S.SpanInferior open={openMenu} backgroumdDark={on} />
+      <S.SpanSuperior open={openMenu} backgroundDark={background} />
+      <S.SpanMeio open={openMenu} backgroundDark={background} />
+      <S.SpanInferior open={openMenu} backgroundDark={background} />
     </S.Container>
   );
 };

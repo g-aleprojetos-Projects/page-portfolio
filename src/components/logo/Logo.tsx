@@ -9,10 +9,14 @@ export interface Props {
 
 export const Logo = (props: Props) => {
   const {testId} = props;
-  const {on} = useBackgroundContext();
+  const {background} = useBackgroundContext();
   const {mobile} = useResponsiveContext();
 
-  const corLetra = mobile ? (on ? colors.white : colors.black) : colors.white;
+  const corLetra = mobile
+    ? background
+      ? colors.white
+      : colors.black
+    : colors.white;
 
   return (
     <div data-testid={testId}>
