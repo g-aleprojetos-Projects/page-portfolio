@@ -14,11 +14,15 @@ describe('Header.styles', () => {
     expect(container).toMatchSnapshot();
   });
   test('Logo DEVE ser igual ao snapshot se mobile for igual a "true"', () => {
-    const container = renderer.create(<S.Logo mobile={true} />).toJSON();
+    const container = renderer
+      .create(<S.ContainerLogo mobile={true} />)
+      .toJSON();
     expect(container).toMatchSnapshot();
   });
   test('Logo DEVE ser igual ao snapshot se mobile for igual a "false"', () => {
-    const container = renderer.create(<S.Logo mobile={false} />).toJSON();
+    const container = renderer
+      .create(<S.ContainerLogo mobile={false} />)
+      .toJSON();
     expect(container).toMatchSnapshot();
   });
 });
