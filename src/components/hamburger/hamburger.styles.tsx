@@ -5,7 +5,7 @@ import sizes from 'resourses/sizes';
 export interface Props {
   open?: boolean;
   mobile?: boolean;
-  backgroumdDark?: boolean;
+  backgroundDark?: boolean;
 }
 
 export const Container = styled.button<Props>`
@@ -16,7 +16,7 @@ export const Container = styled.button<Props>`
   width: ${sizes.px34};
   height: ${sizes.px34};
   right: 0;
-  margin-right: ${sizes.px13};
+  margin-right: ${sizes.px34};
   margin-top: 40px;
   border: none;
   outline: none;
@@ -29,7 +29,7 @@ const Span = styled.span<Props>`
   width: ${sizes.px34};
   height: ${sizes.px3};
   background-color: ${props =>
-    props.backgroumdDark ? colors.white : colors.black};
+    props.backgroundDark ? colors.white : colors.black};
   border-radius: ${sizes.px8};
   transform-origin: ${sizes.px1};
   transition: all 0.3s linear;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "false", mobile for igual a "false" e backgroundDark for "false"  1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "false", mobile for igual a "false" e backgroundDark for "false"  1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -29,11 +29,10 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
 
 <ul
   className="c0"
-  open={false}
 />
 `;
 
-exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "false", mobile for igual a "false" e backgroundDark for "true" 1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "false", mobile for igual a "false" e backgroundDark for "true" 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,11 +61,10 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
 
 <ul
   className="c0"
-  open={false}
 />
 `;
 
-exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "false", mobile for igual a "true" e backgroundDark for "false" 1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "false", mobile for igual a "true" e backgroundDark for "false" 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -86,7 +84,7 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
   transform: translateX(100%);
   top: 0;
   right: 0;
-  width: 250px;
+  width: 100vw;
   height: auto;
   padding-top: 3.5rem;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -96,11 +94,10 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
 
 <ul
   className="c0"
-  open={false}
 />
 `;
 
-exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "false", mobile for igual a "true" e for backgroundDark for "true"  1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "false", mobile for igual a "true" e for backgroundDark for "true"  1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -114,13 +111,13 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   position: fixed;
-  background-color: #00000080;
+  background-color: #000000;
   -webkit-transform: translateX(100%);
   -ms-transform: translateX(100%);
   transform: translateX(100%);
   top: 0;
   right: 0;
-  width: 250px;
+  width: 100vw;
   height: auto;
   padding-top: 3.5rem;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -130,11 +127,10 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
 
 <ul
   className="c0"
-  open={false}
 />
 `;
 
-exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "true", mobile for igual a "false" e for backgroundDark for "false"  1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "true", mobile for igual a "false" e for backgroundDark for "false"  1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -163,11 +159,10 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
 
 <ul
   className="c0"
-  open={true}
 />
 `;
 
-exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "true", mobile for igual a "false" e for backgroundDark for "true"  1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "true", mobile for igual a "false" e for backgroundDark for "true"  1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -196,11 +191,10 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
 
 <ul
   className="c0"
-  open={true}
 />
 `;
 
-exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "true", mobile for igual a "true" e for backgroundDark for "false"  1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "true", mobile for igual a "true" e for backgroundDark for "false"  1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -220,7 +214,7 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
   transform: translateX(0);
   top: 0;
   right: 0;
-  width: 250px;
+  width: 100vw;
   height: auto;
   padding-top: 3.5rem;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -230,11 +224,10 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
 
 <ul
   className="c0"
-  open={true}
 />
 `;
 
-exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open passado como "true", mobile for igual a "true" e for backgroundDark for "true"  1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "true", mobile for igual a "true" e for backgroundDark for "true"  1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -248,13 +241,13 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
   -ms-flex-flow: column nowrap;
   flex-flow: column nowrap;
   position: fixed;
-  background-color: #00000080;
+  background-color: #000000;
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
   top: 0;
   right: 0;
-  width: 250px;
+  width: 100vw;
   height: auto;
   padding-top: 3.5rem;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
@@ -264,11 +257,10 @@ exports[`Hamburger.styles ContainerContent DEVE ser igual ao snapshot com open p
 
 <ul
   className="c0"
-  open={true}
 />
 `;
 
-exports[`Hamburger.styles ContainerNav DEVE ser igual ao snapshot 1`] = `
+exports[`RightNav.styles ContainerNav DEVE ser igual ao snapshot 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -291,7 +283,7 @@ exports[`Hamburger.styles ContainerNav DEVE ser igual ao snapshot 1`] = `
 />
 `;
 
-exports[`Hamburger.styles Flag DEVE ser igual ao snapshot 1`] = `
+exports[`RightNav.styles Flag DEVE ser igual ao snapshot 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -309,7 +301,7 @@ exports[`Hamburger.styles Flag DEVE ser igual ao snapshot 1`] = `
 />
 `;
 
-exports[`Hamburger.styles FlagBrasil DEVE ser igual ao snapshot 1`] = `
+exports[`RightNav.styles FlagBrasil DEVE ser igual ao snapshot 1`] = `
 .c0 {
   width: 3.438rem;
   margin: 0.125rem;
@@ -322,7 +314,7 @@ exports[`Hamburger.styles FlagBrasil DEVE ser igual ao snapshot 1`] = `
 />
 `;
 
-exports[`Hamburger.styles Item DEVE ser igual ao snapshot 1`] = `
+exports[`RightNav.styles Item DEVE ser igual ao snapshot 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -338,16 +330,12 @@ exports[`Hamburger.styles Item DEVE ser igual ao snapshot 1`] = `
   cursor: pointer;
 }
 
-.c0:hover {
-  color: #ff0000;
-}
-
 <li
   className="c0"
 />
 `;
 
-exports[`Hamburger.styles Menu DEVE ser igual ao snapshot se mobile for igual a "false" 1`] = `
+exports[`RightNav.styles Menu DEVE ser igual ao snapshot se mobile for igual a "false" 1`] = `
 .c0 {
   display: none;
   -webkit-box-pack: center;
@@ -369,7 +357,7 @@ exports[`Hamburger.styles Menu DEVE ser igual ao snapshot se mobile for igual a 
 />
 `;
 
-exports[`Hamburger.styles Menu DEVE ser igual ao snapshot se mobile for igual a "true" 1`] = `
+exports[`RightNav.styles Menu DEVE ser igual ao snapshot se mobile for igual a "true" 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -394,7 +382,7 @@ exports[`Hamburger.styles Menu DEVE ser igual ao snapshot se mobile for igual a 
 />
 `;
 
-exports[`Hamburger.styles Texto DEVE ser igual ao snapshot 1`] = `
+exports[`RightNav.styles Texto DEVE ser igual ao snapshot 1`] = `
 .c0 {
   color: #ffffff;
 }

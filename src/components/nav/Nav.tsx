@@ -19,7 +19,7 @@ export const Nav = () => {
         <Logo testId="test_logo" />
       </S.ContainerLogo>
       <Hamburger openMenu={menuLateral} mudarEstado={handleMudarMenu} />
-      <RightNav open={menuLateral} />
+      <RightNav openRightNav={menuLateral} mudarEstado={handleMudarMenu} />
     </S.Container>
   );
 };
