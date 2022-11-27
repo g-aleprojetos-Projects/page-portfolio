@@ -33,6 +33,10 @@ describe('Nav', () => {
       const rightNav = componente.getByTestId('test_rightNav');
       expect(rightNav).toBeDefined();
     });
+    test(`DEVE renderizar o componente "Logo"`, async () => {
+      const logo = componente.getByTestId('test_logo');
+      expect(logo).toBeDefined();
+    });
     describe('Renderização com a tela 768px', () => {
       beforeEach(() => {
         mockedUseResponsiveContext.mockClear();
@@ -47,7 +51,7 @@ describe('Nav', () => {
       });
 
       test(`DEVE renderizar com o "position" como fixed`, () => {
-        const logo = componente.getByTestId('test_logo');
+        const logo = componente.getByTestId('test_container_logo');
         const style = window.getComputedStyle(logo);
         expect(style.position).toEqual('fixed');
       });

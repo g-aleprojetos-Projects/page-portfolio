@@ -51,7 +51,7 @@ exports[`Header.styles Logo DEVE ser igual ao snapshot se mobile for igual a "fa
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  height: auto;
+  height: 5.563rem;
   color: #ffffff;
   padding: 0 0.5rem 0 5.563rem;
 }

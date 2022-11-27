@@ -12,12 +12,12 @@ export const Container = styled.nav<PropsNav>`
   width: 100%;
 `;
 
-export const Logo = styled.div<PropsNav>`
+export const ContainerLogo = styled.div<PropsNav>`
   position: ${props => (props.mobile ? 'fixed' : 'static')};
   display: flex;
   justify-content: center;
   align-items: center;
-  height: ${props => (props.mobile ? sizes.px89 : 'auto')};
+  height: ${sizes.px89};
   color: ${colors.white};
   padding: ${props => (props.mobile ? '0' : `0 ${sizes.px8} 0 ${sizes.px89}`)};
 `;
