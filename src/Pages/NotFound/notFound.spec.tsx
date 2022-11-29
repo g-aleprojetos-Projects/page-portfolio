@@ -1,18 +1,18 @@
 import React from 'react';
 import {render, RenderResult} from '@testing-library/react';
-import {Home} from './home';
+import {NotFound} from './notFound';
 
-describe('Home', () => {
+describe('NotFound', () => {
   let componente: RenderResult;
 
   beforeEach(() => {
-    componente = render(<Home />);
+    componente = render(<NotFound />);
   });
 
   describe('Renderização', () => {
-    test(`DEVE renderizar a pagina "Home"`, () => {
-      const home = componente.getByTestId('teste_home');
-      expect(home).toBeDefined();
+    test(`DEVE renderizar a pagina "NotFound"`, () => {
+      const notFound = componente.getByTestId('test_notFound');
+      expect(notFound).toBeDefined();
     });
     test(`DEVE renderizar a "Imagem" na pagina`, async () => {
       const imagem = componente.findByTestId('teste_imagem');

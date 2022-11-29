@@ -1,16 +1,20 @@
 import React from 'react';
 import {render, RenderResult} from '@testing-library/react';
+import {useNavigate} from 'react-router-dom';
 import {Header} from './Header';
 import {useResponsiveContext} from 'context/mobileWindow';
 
 jest.mock('context/mobileWindow');
-
 const mockedUseResponsiveContext = useResponsiveContext as jest.Mock;
+
+jest.mock('react-router-dom');
+const mockedUseNavigate = useNavigate as jest.Mock;
 
 describe('Hender', () => {
   let componente: RenderResult;
 
   beforeEach(() => {
+    mockedUseNavigate.mockReturnValue(jest.fn());
     mockedUseResponsiveContext.mockClear();
     mockedUseResponsiveContext.mockImplementation(() => ({mobile: false}));
     componente = render(<Header />);
@@ -18,23 +22,23 @@ describe('Hender', () => {
 
   describe('Renderização', () => {
     test(`DEVE renderizar o componente Hender`, async () => {
-      const header = componente.getByTestId('test_header');
+      const header = componente.findByTestId('test_header');
       expect(header).toBeDefined();
     });
     test(`DEVE renderizar o header com o texto "Home"`, () => {
-      const home = componente.getByText('Home');
+      const home = componente.findByText('Home');
       expect(home).toBeDefined();
     });
     test(`DEVE renderizar o header com o texto "Skills"`, () => {
-      const skills = componente.getByText('Skills');
+      const skills = componente.findByText('Skills');
       expect(skills).toBeDefined();
     });
     test(`DEVE renderizar o header com o texto "Projetos"`, () => {
-      const projetos = componente.getByText('Projetos');
+      const projetos = componente.findByText('Projetos');
       expect(projetos).toBeDefined();
     });
     test(`DEVE renderizar o header com o texto "Sobre"`, () => {
-      const sobre = componente.getByText('Sobre');
+      const sobre = componente.findByText('Sobre');
       expect(sobre).toBeDefined();
     });
     test(`DEVE renderizar o header com o "flagBrasil"`, () => {

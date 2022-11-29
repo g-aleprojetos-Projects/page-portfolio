@@ -327,7 +327,46 @@ exports[`RightNav.styles Item DEVE ser igual ao snapshot 1`] = `
   padding: 0.5rem;
   margin: 0.313rem 1.313rem;
   color: #ffffff;
-  cursor: pointer;
+}
+
+<li
+  className="c0"
+/>
+`;
+
+exports[`RightNav.styles ItemNav DEVE ser igual ao snapshot quando "isActive" for "false" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 0.313rem 1.313rem;
+  color: #ffffff;
+}
+
+<li
+  className="c0"
+/>
+`;
+
+exports[`RightNav.styles ItemNav DEVE ser igual ao snapshot quando "isActive" for "true" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 0.313rem 1.313rem;
+  color: #ffffff;
 }
 
 <li

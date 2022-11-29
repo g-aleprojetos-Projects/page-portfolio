@@ -1,19 +1,23 @@
 import React from 'react';
-import {fireEvent, render, RenderResult} from '@testing-library/react';
+import {fireEvent, render, RenderResult, waitFor} from '@testing-library/react';
+import {useNavigate} from 'react-router-dom';
 import {RightNav} from './RightNav';
 import {useResponsiveContext} from 'context/mobileWindow';
 
 jest.mock('context/mobileWindow');
-
 const mockedUseResponsiveContext = useResponsiveContext as jest.Mock;
+
+jest.mock('react-router-dom');
+const mockedUseNavigate = useNavigate as jest.Mock;
 
 describe('Hender', () => {
   let componente: RenderResult;
   const aoClicarMock = jest.fn();
 
   beforeEach(() => {
+    mockedUseNavigate.mockReturnValue(jest.fn());
     mockedUseResponsiveContext.mockClear();
-    mockedUseResponsiveContext.mockImplementation(() => ({mobile: false}));
+    mockedUseResponsiveContext.mockImplementation(() => ({mobile: true}));
     componente = render(
       <RightNav openRightNav={true} mudarEstado={aoClicarMock} />,
     );
@@ -30,16 +34,18 @@ describe('Hender', () => {
       expect(style.fontFamily).toEqual('AvertaStd-Regular');
     });
     test(`DEVE renderizar o componente com o texto "Home"`, () => {
-      const home = componente.getByText('Home');
+      const home = componente.findByText('Home');
       expect(home).toBeDefined();
     });
-    test(`DEVE renderizar o componente com o texto "Home" com font-family igual "AvertaStd-Regular" `, () => {
-      const home = componente.getByText('Home');
-      const style = window.getComputedStyle(home);
-      expect(style.fontFamily).toEqual('AvertaStd-Regular');
+    test(`DEVE renderizar o componente com o texto "Home" com font-family igual "AvertaStd-Semibold" `, async () => {
+      await waitFor(async () => {
+        const home = componente.getByText('Home');
+        const style = window.getComputedStyle(home);
+        expect(style.fontFamily).toEqual('AvertaStd-Semibold');
+      });
     });
     test(`DEVE renderizar o componente com o texto "Skills"`, () => {
-      const skills = componente.getByText('Skills');
+      const skills = componente.findByText('Skills');
       expect(skills).toBeDefined();
     });
     test(`DEVE renderizar o componente com o texto "Skills" com font-family igual "AvertaStd-Regular" `, () => {
@@ -48,7 +54,7 @@ describe('Hender', () => {
       expect(style.fontFamily).toEqual('AvertaStd-Regular');
     });
     test(`DEVE renderizar o componente com o texto "Projetos"`, () => {
-      const projetos = componente.getByText('Projetos');
+      const projetos = componente.findByText('Projetos');
       expect(projetos).toBeDefined();
     });
     test(`DEVE renderizar o componente com o texto "Projetos" com font-family igual "AvertaStd-Regular" `, () => {
@@ -57,7 +63,7 @@ describe('Hender', () => {
       expect(style.fontFamily).toEqual('AvertaStd-Regular');
     });
     test(`DEVE renderizar o componente com o texto "Sobre"`, () => {
-      const sobre = componente.getByText('Sobre');
+      const sobre = componente.findByText('Sobre');
       expect(sobre).toBeDefined();
     });
     test(`DEVE renderizar o componente com o texto "Sobre" com font-family igual "AvertaStd-Regular" `, () => {
@@ -100,12 +106,14 @@ describe('Hender', () => {
       });
     });
     describe('Comportamento', () => {
-      test(`DEVE chamar a função QUANDO clicar no "Home" no menu da navegação`, () => {
-        const home = componente.getByText('Home');
+      test(`DEVE chamar a função QUANDO clicar no "Home" no menu da navegação`, async () => {
+        await waitFor(() => {
+          const home = componente.getByText('Home');
 
-        fireEvent.click(home);
+          fireEvent.click(home);
 
-        expect(aoClicarMock).toBeCalled();
+          expect(aoClicarMock).toBeCalled();
+        });
       });
       test(`DEVE chamar a função QUANDO clicar no "Skills" no menu da navegação`, () => {
         const skills = componente.getByText('Skills');
@@ -127,6 +135,34 @@ describe('Hender', () => {
         fireEvent.click(sobre);
 
         expect(aoClicarMock).toBeCalled();
+      });
+      test(`DEVE renderizar o componente com o texto "Home" com font-family igual "AvertaStd-Regular`, () => {
+        const navSkills = componente.getByText('Skills');
+        fireEvent.click(navSkills);
+        const home = componente.getByText('Home');
+        const style = window.getComputedStyle(home);
+        expect(style.fontFamily).toEqual('AvertaStd-Regular');
+      });
+      test(`DEVE renderizar o componente com o texto "Skills" com font-family igual "AvertaStd-Regular`, () => {
+        const navSkills = componente.getByText('Skills');
+        fireEvent.click(navSkills);
+        const skills = componente.getByText('Skills');
+        const style = window.getComputedStyle(skills);
+        expect(style.fontFamily).toEqual('AvertaStd-Semibold');
+      });
+      test(`DEVE renderizar o componente com o texto "Projetos" com font-family igual "AvertaStd-Regular`, () => {
+        const navProjetos = componente.getByText('Projetos');
+        fireEvent.click(navProjetos);
+        const projetos = componente.getByText('Projetos');
+        const style = window.getComputedStyle(projetos);
+        expect(style.fontFamily).toEqual('AvertaStd-Semibold');
+      });
+      test(`DEVE renderizar o componente com o texto "Sobre" com font-family igual "AvertaStd-Regular`, () => {
+        const navSobre = componente.getByText('Sobre');
+        fireEvent.click(navSobre);
+        const sobre = componente.getByText('Sobre');
+        const style = window.getComputedStyle(sobre);
+        expect(style.fontFamily).toEqual('AvertaStd-Semibold');
       });
 
       describe('Comportamento na tela 768px', () => {

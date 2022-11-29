@@ -1,18 +1,18 @@
 import React from 'react';
 import {render, RenderResult} from '@testing-library/react';
-import {Home} from './home';
+import {Projetos} from './projetos';
 
-describe('Home', () => {
+describe('Projetos', () => {
   let componente: RenderResult;
 
   beforeEach(() => {
-    componente = render(<Home />);
+    componente = render(<Projetos />);
   });
 
   describe('Renderização', () => {
-    test(`DEVE renderizar a pagina "Home"`, () => {
-      const home = componente.getByTestId('teste_home');
-      expect(home).toBeDefined();
+    test(`DEVE renderizar a pagina "Projetos"`, () => {
+      const projetos = componente.getByTestId('teste_projetos');
+      expect(projetos).toBeDefined();
     });
     test(`DEVE renderizar a "Imagem" na pagina`, async () => {
       const imagem = componente.findByTestId('teste_imagem');
