@@ -7,6 +7,7 @@ export interface PropsRightNav {
   openRightNav?: boolean;
   mobile?: boolean;
   backgroundDark?: boolean;
+  isActive?: boolean;
 }
 
 export const Container = styled.div`
@@ -66,13 +67,14 @@ export const Item = styled.li<PropsRightNav>`
   padding: ${props => (props.mobile ? `${sizes.px8} 0` : sizes.px8)};
   margin: ${sizes.px5} ${sizes.px21};
   color: ${colors.white};
-  cursor: pointer;
 `;
 
 export const ItemNav = styled(Item)`
   width: 80%;
+  cursor: ${props => (props.isActive ? 'default' : 'pointer')};
   :hover {
-    background-color: ${props => (props.mobile ? colors.blueMagenta : 'none')};
+    background-color: ${props =>
+      props.mobile ? (props.isActive ? 'none' : colors.blueMagenta) : 'none'};
   }
 `;
 

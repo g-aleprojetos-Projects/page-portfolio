@@ -1,16 +1,20 @@
 import React from 'react';
 import {fireEvent, render, RenderResult} from '@testing-library/react';
+import {useNavigate} from 'react-router-dom';
 import {Nav} from './Nav';
 import {useResponsiveContext} from 'context/mobileWindow';
 
 jest.mock('context/mobileWindow');
-
 const mockedUseResponsiveContext = useResponsiveContext as jest.Mock;
+
+jest.mock('react-router-dom');
+const mockedUseNavigate = useNavigate as jest.Mock;
 
 describe('Nav', () => {
   let componente: RenderResult;
 
   beforeEach(() => {
+    mockedUseNavigate.mockReturnValue(jest.fn());
     mockedUseResponsiveContext.mockClear();
     mockedUseResponsiveContext.mockImplementation(() => ({mobile: false}));
     componente = render(<Nav />);

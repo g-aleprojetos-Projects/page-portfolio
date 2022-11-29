@@ -122,6 +122,14 @@ describe('RightNav.styles', () => {
     const item = renderer.create(<S.Item />).toJSON();
     expect(item).toMatchSnapshot();
   });
+  test('ItemNav DEVE ser igual ao snapshot quando "isActive" for "false"', () => {
+    const item = renderer.create(<S.Item isActive={false} />).toJSON();
+    expect(item).toMatchSnapshot();
+  });
+  test('ItemNav DEVE ser igual ao snapshot quando "isActive" for "true"', () => {
+    const item = renderer.create(<S.Item isActive={true} />).toJSON();
+    expect(item).toMatchSnapshot();
+  });
   test('Flag DEVE ser igual ao snapshot', () => {
     const flag = renderer.create(<S.Flag />).toJSON();
     expect(flag).toMatchSnapshot();
