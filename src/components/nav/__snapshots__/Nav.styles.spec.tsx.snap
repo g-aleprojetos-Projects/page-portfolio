@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header.styles Container DEVE ser igual ao snapshot se mobile for igual a "false" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+}
+
+<nav
+  className="c0"
+/>
+`;
+
+exports[`Header.styles Container DEVE ser igual ao snapshot se mobile for igual a "true" 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+<nav
+  className="c0"
+/>
+`;
+
+exports[`Header.styles Logo DEVE ser igual ao snapshot se mobile for igual a "false" 1`] = `
+.c0 {
+  position: static;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 5.563rem;
+  color: #ffffff;
+  padding: 0 0.5rem 0 5.563rem;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`Header.styles Logo DEVE ser igual ao snapshot se mobile for igual a "true" 1`] = `
+.c0 {
+  position: fixed;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 5.563rem;
+  color: #ffffff;
+  padding: 0;
+}
+
+<div
+  className="c0"
+/>
+`;

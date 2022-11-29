@@ -1,31 +1,16 @@
 import styled from 'styled-components';
-import manutencao from './../../assets/image/photo.jpg';
+import SVG from 'react-inlinesvg';
+import sizes from 'resourses/sizes';
 
 export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
+  width: 100%;
+  height: 100%;
 `;
 
-export const ContainerImagem = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90vw;
-  height: auto;
-  padding: 1rem;
+export const Imagem = styled(SVG)`
+  width: ${sizes.px610};
+  height: ${sizes.px610};
 `;
-
-export const Imagem = styled.img`
-  width: 85%;
-  height: auto;
-  src: ${manutencao};
-`;
-
-Imagem.defaultProps = {
-  src: manutencao,
-  alt: 'Imagem de site em manutenção',
-};

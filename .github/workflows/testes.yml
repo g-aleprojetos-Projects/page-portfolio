@@ -8,18 +8,30 @@ on:
 
 jobs:
   deploy:
+    name: Test code
     runs-on: ubuntu-latest
+
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Deploy Project
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: ${{matrix.node-version}}
+          node-version: 16
 
       - name: Install Dependency
         run: yarn install
 
       - name: Run test
-        run: yarn run test
+        run: yarn test --coverage
+
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
