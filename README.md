@@ -2,7 +2,7 @@
 
 <div align="center">
 
- [![Coverage Status](https://coveralls.io/repos/github/g-aleprojetos-Projects/page-portfolio/badge.png?branch=main)](https://coveralls.io/github/g-aleprojetos-Projects/page-portfolio?branch=main&kill_cache=1)
+[![Coverage Status](https://coveralls.io/repos/github/g-aleprojetos-Projects/page-portfolio/badge.svg?branch=main)](https://coveralls.io/github/g-aleprojetos-Projects/page-portfolio?branch=main)
  [![MIT Licensed](https://img.shields.io/badge/license-MIT-green.svg)](https://tldrlegal.com/license/mit-license)
 
 
