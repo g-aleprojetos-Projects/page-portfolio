@@ -28,10 +28,10 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  deploy-QAS:
+  deploy-HOMOLOGACAO:
     runs-on: ubuntu-latest
     environment:
-      name: QAS
+      name: HOMOLOGACAO
     needs: tests
     steps:
       - name: Deploy Project
@@ -52,7 +52,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          branch: 'QAS-Pages'
+          branch: 'Homologacao-Pages'
 
   deploy-PROD:
     runs-on: ubuntu-latest
