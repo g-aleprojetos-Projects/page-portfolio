@@ -40,56 +40,11 @@ jobs:
         with:
           branch: 'QAS-Pages'
 
-  deploy-HOMOLOGACAO:
-    updateAuthor:
-      runs-on: ubuntu-latest
-      environment:
-        name: HOMOLOGACAO
-      needs: deploy-QAS
-      steps:
-        - name: checking out code
-          uses: actions/checkout@v2
-
-        - name: extract git commit data
-          uses: rlespinasse/git-commit-data-action@v1.x
-
-        - name: Update author information
-          run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME }} > AUTHOR
-
-        - name: Raise PR 1
-          id: homo-1
-          uses: peter-evans/create-pull-request@v3
-          with:
-            branch: "auto-pr-homologacao"
-            base: development
-            title: "Homologacao for auto pr1"
-            committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
-            author: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
-            body:
-              This is to show automatic PR creation
-            token: ${{ secrets.GITHUB_TOKEN }}
-
-        - name: Approve Pull Request1
-          uses: juliangruber/approve-pull-request-action@v1
-          with:
-            github-token: ${{ secrets.APPROVER_COMMIT }}
-            number: ${{ steps.demo-1.outputs.pull-request-number }}
-
-        - name: Merge Pull request1
-          uses: juliangruber/merge-pull-request-action@v1
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            number: ${{ steps.demo-1.outputs.pull-request-number }}
-            method: squash
-
-        - name: Update author information again
-          run: echo Gaurav > AUTHOR
-
   deploy-PROD:
     runs-on: ubuntu-latest
     environment:
       name: PROD
-    needs: deploy-HOMOLOGACAO
+    needs: deploy-QAS
     steps:
       - name: Deploy Project
         uses: actions/checkout@v2
