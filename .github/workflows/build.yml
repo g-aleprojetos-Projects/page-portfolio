@@ -29,30 +29,49 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
   deploy-HOMOLOGACAO:
-    runs-on: ubuntu-latest
-    environment:
-      name: HOMOLOGACAO
-    needs: tests
-    steps:
-      - name: Deploy Project
-        uses: actions/checkout@v2
+    updateAuthor:
+      runs-on: ubuntu-latest
+      environment:
+        name: HOMOLOGACAO
+      needs: homologacao
+      steps:
+        - name: checking out code
+          uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16
+        - name: extract git commit data
+          uses: rlespinasse/git-commit-data-action@v1.x
 
-      - name: Build web-app
-        run: |
-          yarn install --frozen-lockfile
-          yarn run build
+        - name: Update author information
+          run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME }} > AUTHOR
 
-      - name: Deploy to qas-pages
-        uses: peterjgrainger/action-create-branch@v2.2.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          branch: 'Homologacao-Pages'
+        - name: Raise PR 1
+          id: homo-1
+          uses: peter-evans/create-pull-request@v3
+          with:
+            branch: "auto-pr-homologacao"
+            base: development
+            title: "Homologacao for auto pr1"
+            committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
+            author: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
+            body:
+              This is to show automatic PR creation
+            token: ${{ secrets.GITHUB_TOKEN }}
+
+        - name: Approve Pull Request1
+          uses: juliangruber/approve-pull-request-action@v1
+          with:
+            github-token: ${{ secrets.APPROVER_COMMIT }}
+            number: ${{ steps.demo-1.outputs.pull-request-number }}
+
+        - name: Merge Pull request1
+          uses: juliangruber/merge-pull-request-action@v1
+          with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            number: ${{ steps.demo-1.outputs.pull-request-number }}
+            method: squash
+
+        - name: Update author information again
+          run: echo Gaurav > AUTHOR
 
   deploy-PROD:
     runs-on: ubuntu-latest
