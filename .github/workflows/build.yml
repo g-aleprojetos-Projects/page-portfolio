@@ -32,7 +32,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: PROD
-    needs: deploy-HOM
+    needs: tests
     steps:
       - name: Deploy Project
         uses: actions/checkout@v2
