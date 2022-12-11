@@ -1,0 +1,16 @@
+{
+    "idioma":{
+        "portugues":{
+            "menu1": "Pagina Inicial",
+            "menu2": "Tecnologias",
+            "menu3": "Projetos",
+            "menu4": "Sobre"
+        },
+        "ingles":{
+            "menu1": "Home",
+            "menu2": "Skills",
+            "menu3": "projects",
+            "menu4": "About us"
+        }
+    }
+}
