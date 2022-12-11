@@ -40,7 +40,7 @@ jobs:
         with:
           branch: 'QAS-Page'
 
-    deploy-HOM:
+  deploy-HOM:
     runs-on: ubuntu-latest
     environment:
       name: HOM
