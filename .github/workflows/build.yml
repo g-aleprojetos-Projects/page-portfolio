@@ -44,7 +44,7 @@ jobs:
 
       - name: Build web-app
         run: |
-          yarn ci
+          yarn install --frozen-lockfile
           yarn run build
 
       - name: Deploy to homologation-page
