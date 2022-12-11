@@ -67,7 +67,7 @@ jobs:
         id: homologation-1
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: "auto-pr-homologation"
+          branch: "Homologation-Page"
           base: development
           title: "Homologation for auto pr1"
           committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}">
@@ -76,21 +76,21 @@ jobs:
             This is to show automatic PR creation
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Approve Pull Request1
-        uses: juliangruber/approve-pull-request-action@v1
-        with:
-          github-token: ${{ secrets.APPROVER_COMMIT }}
-          number: ${{ steps.demo-1.outputs.pull-request-number }}
+      # - name: Approve Pull Request1
+      #   uses: juliangruber/approve-pull-request-action@v1
+      #   with:
+      #     github-token: ${{ secrets.APPROVER_COMMIT }}
+      #     number: ${{ steps.demo-1.outputs.pull-request-number }}
 
-      - name: Merge Pull request1
-        uses: juliangruber/merge-pull-request-action@v1
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          number: ${{ steps.demo-1.outputs.pull-request-number }}
-          method: squash
+      # - name: Merge Pull request1
+      #   uses: juliangruber/merge-pull-request-action@v1
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     number: ${{ steps.demo-1.outputs.pull-request-number }}
+      #     method: squash
 
-      - name: Update author information again
-        run: echo Gaurav > AUTHOR
+      # - name: Update author information again
+      #   run: echo Gaurav > AUTHOR
 
   deploy-Production:
     runs-on: ubuntu-latest
