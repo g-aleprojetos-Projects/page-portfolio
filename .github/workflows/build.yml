@@ -28,30 +28,6 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  deploy-QAS:
-    runs-on: ubuntu-latest
-    environment:
-      name: QAS
-    needs: tests
-    steps:
-      - name: Deploy Project
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          branch: 'QAS-Page'
-
-  deploy-HOM:
-    runs-on: ubuntu-latest
-    environment:
-      name: HOM
-    needs: deploy-QAS
-    steps:
-      - name: Deploy Project
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          branch: 'HOM-Page'
-
   deploy-PROD:
     runs-on: ubuntu-latest
     environment:
