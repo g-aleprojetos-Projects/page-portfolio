@@ -54,8 +54,8 @@ jobs:
         with:
           branch: 'Homologation-Page'
 
-      - name: checking out code
-        uses: actions/checkout@v2
+      # - name: checking out code
+      #   uses: actions/checkout@v2
 
       - name: extract git commit data
         uses: rlespinasse/git-commit-data-action@v1.x
