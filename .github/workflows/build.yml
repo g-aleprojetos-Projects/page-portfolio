@@ -54,7 +54,6 @@ jobs:
         with:
           branch: 'Homologation-Page'
 
-    steps:
       - name: checking out code
         uses: actions/checkout@v2
 
