@@ -28,11 +28,37 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
+  deploy-Homologation:
+    runs-on: ubuntu-latest
+    environment:
+      name: Homologation
+    needs: tests
+    steps:
+      - name: Deploy Project
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+
+      - name: Build web-app
+        run: |
+          yarn ci
+          yarn run build
+
+      - name: Deploy to homologation-page
+        uses: peterjgrainger/action-create-branch@v2.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          branch: 'Homologation-Page'
+
   deploy-PROD:
     runs-on: ubuntu-latest
     environment:
       name: PROD
-    needs: tests
+    needs: deploy-Homologation
     steps:
       - name: Deploy Project
         uses: actions/checkout@v2
