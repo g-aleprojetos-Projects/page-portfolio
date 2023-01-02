@@ -4,15 +4,14 @@ import sizes from 'resourses/sizes';
 
 export interface Props {
   open?: boolean;
-  mobile?: boolean;
   backgroundDark?: boolean;
 }
 
 export const Container = styled.button<Props>`
-  display: ${props => (props.mobile ? 'flex' : 'none')};
+  display: none;
   position: fixed;
-  justify-content: ${props => (props.mobile ? 'space-around' : 'flex-start')};
-  flex-flow: ${props => (props.mobile ? 'column nowrap' : 'row nowrap')};
+  justify-content: space-around;
+  flex-flow: column nowrap;
   width: ${sizes.px34};
   height: ${sizes.px34};
   right: 0;
@@ -23,6 +22,10 @@ export const Container = styled.button<Props>`
   background-color: transparent;
   cursor: pointer;
   z-index: 20;
+
+  @media (max-width: ${sizes.media_768}) {
+    display: flex;
+  }
 `;
 
 const Span = styled.span<Props>`

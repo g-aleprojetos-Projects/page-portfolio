@@ -19,7 +19,7 @@ export type Props = {
 export const TextoStyled = styled.p<Props>`
   font-size: ${props => props.tamanho ?? textos.tamanho.xxxsmall}px;
   font-family: ${props =>
-    props.peso === 'bold' ? fontes.avertaSemibold : fontes.avertaRegular};
+    props.peso === 'bold' ? fontes.avertaBold : fontes.avertaRegular};
   color: ${props => props.cor ?? colors.white};
   margin-top: ${props => props.marginTop ?? 0}px;
   text-transform: ${props => (props.toUpper ? 'uppercase' : 'none')};

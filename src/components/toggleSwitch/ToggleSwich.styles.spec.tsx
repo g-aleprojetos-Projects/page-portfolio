@@ -11,25 +11,30 @@ describe('ToggleSwitch.styles', () => {
       .toJSON();
     expect(containerNav).toMatchSnapshot();
   });
+
   test('ToggleSwitchWrapper DEVE ser igual ao snapshot quando isOn for "false"', () => {
     const containerNav = renderer
       .create(<S.ToggleSwitchWrapper isOn={false} />)
       .toJSON();
     expect(containerNav).toMatchSnapshot();
   });
+
   test('Span DEVE ser igual ao snapshot', () => {
     const containerNav = renderer.create(<S.Span />).toJSON();
     expect(containerNav).toMatchSnapshot();
   });
+
   test('SpanBack DEVE ser igual ao snapshot quando isOn for "true"', () => {
     const containerNav = renderer.create(<S.SpanBack isOn={true} />).toJSON();
     expect(containerNav).toMatchSnapshot();
   });
+
   test('SpanBack DEVE ser igual ao snapshot quando isOn for "false"', () => {
     const containerNav = renderer.create(<S.SpanBack isOn={false} />).toJSON();
     expect(containerNav).toMatchSnapshot();
   });
-  test('SpanBack DEVE ser igual ao snapshot', () => {
+
+  test('Input DEVE ser igual ao snapshot', () => {
     const containerNav = renderer.create(<S.Input />).toJSON();
     expect(containerNav).toMatchSnapshot();
   });

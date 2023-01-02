@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "false", mobile for igual a "false" e backgroundDark for "false"  1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot QUANDO "openRightNav" for false e "backgroundDark" for false. 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -14,17 +14,41 @@ exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRig
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   position: static;
-  background-color: transparent;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-  top: auto;
-  right: auto;
-  width: auto;
+  background-color: 'transparent';
+  -webkit-transform: 'none';
+  -ms-transform: 'none';
+  transform: 'none';
+  top: 'auto';
+  right: 'auto';
+  width: 'auto';
   height: auto;
-  padding-top: auto;
-  -webkit-transition: none;
-  transition: none;
+  padding-top: 'auto';
+  -webkit-transition: 'none';
+  transition: 'none';
+}
+
+@media screen and (max-width:768px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    position: fixed;
+    background-color: #000000;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    top: 0;
+    right: 0;
+    width: 100vw;
+    padding-top: 3.5rem;
+    -webkit-transition: 'transform 0.3s ease-in-out';
+    -webkit-transition: 'transform 0.3s ease-in-out';
+    transition: 'transform 0.3s ease-in-out';
+  }
 }
 
 <ul
@@ -32,7 +56,7 @@ exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRig
 />
 `;
 
-exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "false", mobile for igual a "false" e backgroundDark for "true" 1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot QUANDO "openRightNav" for false e "backgroundDark" for true. 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -46,17 +70,41 @@ exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRig
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   position: static;
-  background-color: transparent;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-  top: auto;
-  right: auto;
-  width: auto;
+  background-color: 'transparent';
+  -webkit-transform: 'none';
+  -ms-transform: 'none';
+  transform: 'none';
+  top: 'auto';
+  right: 'auto';
+  width: 'auto';
   height: auto;
-  padding-top: auto;
-  -webkit-transition: none;
-  transition: none;
+  padding-top: 'auto';
+  -webkit-transition: 'none';
+  transition: 'none';
+}
+
+@media screen and (max-width:768px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    position: fixed;
+    background-color: #000000;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+    top: 0;
+    right: 0;
+    width: 100vw;
+    padding-top: 3.5rem;
+    -webkit-transition: 'transform 0.3s ease-in-out';
+    -webkit-transition: 'transform 0.3s ease-in-out';
+    transition: 'transform 0.3s ease-in-out';
+  }
 }
 
 <ul
@@ -64,73 +112,7 @@ exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRig
 />
 `;
 
-exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "false", mobile for igual a "true" e backgroundDark for "false" 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  position: fixed;
-  background-color: #000000;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: auto;
-  padding-top: 3.5rem;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  -webkit-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-}
-
-<ul
-  className="c0"
-/>
-`;
-
-exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "false", mobile for igual a "true" e for backgroundDark for "true"  1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  position: fixed;
-  background-color: #000000;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: auto;
-  padding-top: 3.5rem;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  -webkit-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-}
-
-<ul
-  className="c0"
-/>
-`;
-
-exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "true", mobile for igual a "false" e for backgroundDark for "false"  1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot QUANDO "openRightNav" for true e "backgroundDark" for false. 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -144,17 +126,41 @@ exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRig
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   position: static;
-  background-color: transparent;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-  top: auto;
-  right: auto;
-  width: auto;
+  background-color: 'transparent';
+  -webkit-transform: 'none';
+  -ms-transform: 'none';
+  transform: 'none';
+  top: 'auto';
+  right: 'auto';
+  width: 'auto';
   height: auto;
-  padding-top: auto;
-  -webkit-transition: none;
-  transition: none;
+  padding-top: 'auto';
+  -webkit-transition: 'none';
+  transition: 'none';
+}
+
+@media screen and (max-width:768px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    position: fixed;
+    background-color: #000000;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    top: 0;
+    right: 0;
+    width: 100vw;
+    padding-top: 3.5rem;
+    -webkit-transition: 'transform 0.3s ease-in-out';
+    -webkit-transition: 'transform 0.3s ease-in-out';
+    transition: 'transform 0.3s ease-in-out';
+  }
 }
 
 <ul
@@ -162,7 +168,7 @@ exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRig
 />
 `;
 
-exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "true", mobile for igual a "false" e for backgroundDark for "true"  1`] = `
+exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot QUANDO "openRightNav" for true e "backgroundDark" for true. 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -176,83 +182,41 @@ exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRig
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
   position: static;
-  background-color: transparent;
-  -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
-  top: auto;
-  right: auto;
-  width: auto;
+  background-color: 'transparent';
+  -webkit-transform: 'none';
+  -ms-transform: 'none';
+  transform: 'none';
+  top: 'auto';
+  right: 'auto';
+  width: 'auto';
   height: auto;
-  padding-top: auto;
-  -webkit-transition: none;
-  transition: none;
+  padding-top: 'auto';
+  -webkit-transition: 'none';
+  transition: 'none';
 }
 
-<ul
-  className="c0"
-/>
-`;
-
-exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "true", mobile for igual a "true" e for backgroundDark for "false"  1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  position: fixed;
-  background-color: #000000;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: auto;
-  padding-top: 3.5rem;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  -webkit-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
-}
-
-<ul
-  className="c0"
-/>
-`;
-
-exports[`RightNav.styles ContainerContent DEVE ser igual ao snapshot com openRightNav passado como "true", mobile for igual a "true" e for backgroundDark for "true"  1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-flex-flow: column nowrap;
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  position: fixed;
-  background-color: #000000;
-  -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
-  top: 0;
-  right: 0;
-  width: 100vw;
-  height: auto;
-  padding-top: 3.5rem;
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  -webkit-transition: transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
+@media screen and (max-width:768px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    position: fixed;
+    background-color: #000000;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    top: 0;
+    right: 0;
+    width: 100vw;
+    padding-top: 3.5rem;
+    -webkit-transition: 'transform 0.3s ease-in-out';
+    -webkit-transition: 'transform 0.3s ease-in-out';
+    transition: 'transform 0.3s ease-in-out';
+  }
 }
 
 <ul
@@ -283,7 +247,7 @@ exports[`RightNav.styles ContainerNav DEVE ser igual ao snapshot 1`] = `
 />
 `;
 
-exports[`RightNav.styles Flag DEVE ser igual ao snapshot 1`] = `
+exports[`RightNav.styles Flag DEVE ser igual ao snapshot. 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -301,7 +265,7 @@ exports[`RightNav.styles Flag DEVE ser igual ao snapshot 1`] = `
 />
 `;
 
-exports[`RightNav.styles FlagBrasil DEVE ser igual ao snapshot 1`] = `
+exports[`RightNav.styles FlagBrasil DEVE ser igual ao snapshot. 1`] = `
 .c0 {
   width: 3.438rem;
   margin: 0.125rem;
@@ -314,7 +278,7 @@ exports[`RightNav.styles FlagBrasil DEVE ser igual ao snapshot 1`] = `
 />
 `;
 
-exports[`RightNav.styles Item DEVE ser igual ao snapshot 1`] = `
+exports[`RightNav.styles Item DEVE ser igual ao snapshot. 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -324,9 +288,15 @@ exports[`RightNav.styles Item DEVE ser igual ao snapshot 1`] = `
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0.5rempx;
   margin: 0.313rem 1.313rem;
   color: #ffffff;
+}
+
+@media screen and (max-width:768px) {
+  .c0 {
+    padding: 0.5rempx 0;
+  }
 }
 
 <li
@@ -334,7 +304,7 @@ exports[`RightNav.styles Item DEVE ser igual ao snapshot 1`] = `
 />
 `;
 
-exports[`RightNav.styles ItemNav DEVE ser igual ao snapshot quando "isActive" for "false" 1`] = `
+exports[`RightNav.styles ItemNav DEVE ser igual ao snapshot QUANDO "isActive" for false. 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -344,9 +314,15 @@ exports[`RightNav.styles ItemNav DEVE ser igual ao snapshot quando "isActive" fo
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0.5rempx;
   margin: 0.313rem 1.313rem;
   color: #ffffff;
+}
+
+@media screen and (max-width:768px) {
+  .c0 {
+    padding: 0.5rempx 0;
+  }
 }
 
 <li
@@ -354,7 +330,7 @@ exports[`RightNav.styles ItemNav DEVE ser igual ao snapshot quando "isActive" fo
 />
 `;
 
-exports[`RightNav.styles ItemNav DEVE ser igual ao snapshot quando "isActive" for "true" 1`] = `
+exports[`RightNav.styles ItemNav DEVE ser igual ao snapshot QUANDO "isActive" for true. 1`] = `
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -364,9 +340,15 @@ exports[`RightNav.styles ItemNav DEVE ser igual ao snapshot quando "isActive" fo
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0.5rempx;
   margin: 0.313rem 1.313rem;
   color: #ffffff;
+}
+
+@media screen and (max-width:768px) {
+  .c0 {
+    padding: 0.5rempx 0;
+  }
 }
 
 <li
@@ -374,46 +356,30 @@ exports[`RightNav.styles ItemNav DEVE ser igual ao snapshot quando "isActive" fo
 />
 `;
 
-exports[`RightNav.styles Menu DEVE ser igual ao snapshot se mobile for igual a "false" 1`] = `
+exports[`RightNav.styles Menu DEVE ser igual ao snapshot  1`] = `
 .c0 {
   display: none;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  padding: 20px 0;
-  margin-bottom: 10px;
-  background-color: #00875F;
 }
 
-<div
-  className="c0"
-/>
-`;
-
-exports[`RightNav.styles Menu DEVE ser igual ao snapshot se mobile for igual a "true" 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: 100%;
-  padding: 20px 0;
-  margin-bottom: 10px;
-  background-color: #00875F;
+@media screen and (max-width:768px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    background-color: #00875F;
+  }
 }
 
 <div

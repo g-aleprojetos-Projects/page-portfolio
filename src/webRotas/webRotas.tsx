@@ -11,7 +11,7 @@ import rotas from 'resourses/rotas';
 import * as S from './webRotas.styles';
 
 export const WebRotas = () => {
-  const {background} = useBackgroundContext();
+  const {temaEscuro: background} = useBackgroundContext();
   return (
     <Router>
       <S.Container backgroundBlack={background} data-testid={'test_web'}>

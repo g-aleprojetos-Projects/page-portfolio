@@ -5,30 +5,21 @@ import 'jest-styled-components';
 import * as S from './Header.styles';
 
 describe('Header.styles', () => {
-  test('Container DEVE ser igual ao snapshot se mobile for igual a "true"', () => {
-    const container = renderer.create(<S.Container mobile={true} />).toJSON();
+  test('Container DEVE ser igual ao snapshot', () => {
+    const container = renderer.create(<S.Container />).toJSON();
     expect(container).toMatchSnapshot();
   });
-  test('Container DEVE ser igual ao snapshot se mobile for igual a "false"', () => {
-    const container = renderer.create(<S.Container mobile={false} />).toJSON();
-    expect(container).toMatchSnapshot();
-  });
-  test('Overlay DEVE ser igual ao snapshot se mobile for igual a "true"', () => {
-    const overlay = renderer.create(<S.Overlay mobile={true} />).toJSON();
+
+  test('Overlay DEVE ser igual ao snapshot', () => {
+    const overlay = renderer.create(<S.Overlay />).toJSON();
     expect(overlay).toMatchSnapshot();
   });
-  test('Overlay DEVE ser igual ao snapshot se mobile for igual a "false"', () => {
-    const overlay = renderer.create(<S.Overlay mobile={false} />).toJSON();
-    expect(overlay).toMatchSnapshot();
-  });
-  test('Video DEVE ser igual ao snapshot se mobile for igual a "true"', () => {
-    const video = renderer.create(<S.Video mobile={true} />).toJSON();
+
+  test('Video DEVE ser igual ao snapshot', () => {
+    const video = renderer.create(<S.Video />).toJSON();
     expect(video).toMatchSnapshot();
   });
-  test('Video DEVE ser igual ao snapshot se mobile for igual a "false"', () => {
-    const video = renderer.create(<S.Video mobile={false} />).toJSON();
-    expect(video).toMatchSnapshot();
-  });
+
   test('Content DEVE ser igual ao snapshot', () => {
     const content = renderer.create(<S.ContainerContent />).toJSON();
     expect(content).toMatchSnapshot();
