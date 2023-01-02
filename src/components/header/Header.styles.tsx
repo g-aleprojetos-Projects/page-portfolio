@@ -3,33 +3,36 @@ import myVideo from 'assets/video/video.mp4';
 import colors from '../../resourses/colors';
 import sizes from 'resourses/sizes';
 
-export interface PropsHeader {
-  mobile: boolean;
-}
-
-export const Container = styled.div<PropsHeader>`
+export const Container = styled.div`
   display: flex;
   width: 100%;
   height: ${sizes.px144};
-  background-color: ${props =>
-    props.mobile ? 'transparent' : colors.lightgray};
+  background-color: 'transparent';
 `;
 
-export const Overlay = styled.div<PropsHeader>`
-  display: ${props => (props.mobile ? 'none' : 'flex')};
+export const Overlay = styled.div`
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: ${sizes.px144};
   background-color: ${colors.black50per};
+
+  @media (max-width: ${sizes.media_768}) {
+    display: none;
+  }
 `;
 
-export const Video = styled.video<PropsHeader>`
-  display: ${props => (props.mobile ? 'none' : 'flex')};
+export const Video = styled.video`
+  display: flex;
   width: 100vw;
   height: 100%;
   object-fit: cover;
+
+  @media (max-width: ${sizes.media_768}) {
+    display: none;
+  }
 `;
 
 Video.defaultProps = {

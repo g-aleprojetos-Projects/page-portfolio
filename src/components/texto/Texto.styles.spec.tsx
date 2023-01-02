@@ -5,14 +5,14 @@ import 'jest-styled-components';
 import {TextoStyled} from './Texto.styles';
 import colors from 'resourses/colors';
 
-describe('TextoMedium.styles', () => {
+describe('Texto.styles', () => {
   test('DEVE ser igual ao snapshot', () => {
     const texto = renderer.create(<TextoStyled>Teste</TextoStyled>).toJSON();
 
     expect(texto).toMatchSnapshot();
   });
 
-  test('DEVE ter a cor igual a "##000000" QUANDO a propriedade cor informada for "##000000"', () => {
+  test(`DEVE ter a cor igual a "##000000" QUANDO a propriedade cor informada for "${colors.black}"`, () => {
     const texto = renderer
       .create(<TextoStyled cor={colors.black}>Teste</TextoStyled>)
       .toJSON();
@@ -41,7 +41,7 @@ describe('TextoMedium.styles', () => {
       .create(<TextoStyled peso="bold">Teste</TextoStyled>)
       .toJSON();
 
-    expect(texto).toHaveStyleRule('font-family', 'AvertaStd-Semibold');
+    expect(texto).toHaveStyleRule('font-family', 'AvertaStd-Bold');
   });
 
   test('DEVE ter o text-transform igual a "uppercase" QUANDO a propriedade toUpper for igual a "true"', () => {
@@ -51,6 +51,7 @@ describe('TextoMedium.styles', () => {
 
     expect(texto).toHaveStyleRule('text-transform', 'uppercase');
   });
+
   test('DEVE ter o cursor igual a "pointer" QUANDO a propriedade cursor for igual a "pointer"', () => {
     const texto = renderer
       .create(<TextoStyled cursor="pointer">Teste</TextoStyled>)

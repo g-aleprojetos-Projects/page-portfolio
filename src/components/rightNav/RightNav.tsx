@@ -1,21 +1,20 @@
 import React, {useState} from 'react';
-import {useResponsiveContext} from 'context/mobileWindow';
 import {useBackgroundContext} from 'context/backgroud';
 import {ToggleSwitch} from 'components/toggleSwitch';
 import * as S from './RightNav.styles';
 import {TextoMedium, TextoSmall} from 'components/texto';
 import {useNavigate} from 'react-router-dom';
 import rotas from 'resourses/rotas';
+import colors from 'resourses/colors';
 
 type Props = S.PropsRightNav & {
   mudarEstado: () => void;
 };
 
 export const RightNav = (props: Props) => {
-  const {openRightNav, mudarEstado} = props;
   const navigate = useNavigate();
-  const {mobile} = useResponsiveContext();
-  const {background, handleToggle} = useBackgroundContext();
+  const {openRightNav, mudarEstado} = props;
+  const {temaEscuro, handleToggle} = useBackgroundContext();
   const [telaAtiva, setTelaAtiva] = useState<string>(rotas.Home);
 
   const handleNavegate = (item: string) => {
@@ -24,22 +23,29 @@ export const RightNav = (props: Props) => {
     mudarEstado();
   };
 
+  const handleToggleSwich = () => {
+    handleToggle();
+    mudarEstado();
+  };
+
   return (
     <>
-      {mobile && openRightNav && <S.Container onClick={mudarEstado} />}
+      {openRightNav && (
+        <S.Container
+          data-testid={'test_rightNav_container'}
+          onClick={mudarEstado}
+        />
+      )}
       <S.ContainerNav data-testid={'test_rightNav'}>
         <S.ContainerContent
           data-testid={'test_containerContent'}
-          openRightNav={openRightNav}
-          mobile={mobile}
-          backgroundDark={background}>
-          <S.Menu data-testid={'test_menu'} mobile={mobile}>
+          openRightNav={openRightNav}>
+          <S.Menu data-testid={'test_menu'}>
             <S.Texto>
               <TextoSmall>Menu</TextoSmall>
             </S.Texto>
           </S.Menu>
           <S.ItemNav
-            mobile={mobile}
             isActive={telaAtiva === rotas.Home && true}
             onClick={() => {
               handleNavegate(rotas.Home);
@@ -49,11 +55,12 @@ export const RightNav = (props: Props) => {
                 Home
               </TextoMedium>
             ) : (
-              <TextoSmall cursor="pointer"> Home</TextoSmall>
+              <TextoSmall cursor="pointer" cor={colors.lightgray}>
+                Home
+              </TextoSmall>
             )}
           </S.ItemNav>
           <S.ItemNav
-            mobile={mobile}
             isActive={telaAtiva === rotas.Skills && true}
             onClick={() => {
               handleNavegate(rotas.Skills);
@@ -63,11 +70,12 @@ export const RightNav = (props: Props) => {
                 Skills
               </TextoMedium>
             ) : (
-              <TextoSmall cursor="pointer"> Skills</TextoSmall>
+              <TextoSmall cursor="pointer" cor={colors.lightgray}>
+                Skills
+              </TextoSmall>
             )}
           </S.ItemNav>
           <S.ItemNav
-            mobile={mobile}
             isActive={telaAtiva === rotas.Projetos && true}
             onClick={() => {
               handleNavegate(rotas.Projetos);
@@ -77,11 +85,12 @@ export const RightNav = (props: Props) => {
                 Projetos
               </TextoMedium>
             ) : (
-              <TextoSmall cursor="pointer"> Projetos</TextoSmall>
+              <TextoSmall cursor="pointer" cor={colors.lightgray}>
+                Projetos
+              </TextoSmall>
             )}
           </S.ItemNav>
           <S.ItemNav
-            mobile={mobile}
             isActive={telaAtiva === rotas.Sobre && true}
             onClick={() => {
               handleNavegate(rotas.Sobre);
@@ -91,11 +100,13 @@ export const RightNav = (props: Props) => {
                 Sobre
               </TextoMedium>
             ) : (
-              <TextoSmall cursor="pointer"> Sobre</TextoSmall>
+              <TextoSmall cursor="pointer" cor={colors.lightgray}>
+                Sobre
+              </TextoSmall>
             )}
           </S.ItemNav>
           <S.Item data-testid={'test_toggle'}>
-            <ToggleSwitch isOn={background} handleOnclick={handleToggle} />
+            <ToggleSwitch isOn={temaEscuro} handleOnclick={handleToggleSwich} />
           </S.Item>
           <S.Flag>
             <S.FlagBrasil data-testid={'test_flag_Brasil'} />

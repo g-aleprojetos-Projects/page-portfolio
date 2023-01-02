@@ -4,13 +4,11 @@ import sizes from 'resourses/sizes';
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 100%;
+  margin-top: ${sizes.px21};
 `;
 
-export const Imagem = styled(SVG)`
-  width: ${sizes.px377};
-  height: ${sizes.px377};
+export const Iconelogo = styled(SVG)`
+  width: ${sizes.px144};
+  height: ${sizes.px144};
 `;

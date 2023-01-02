@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ToggleSwitch.styles Input DEVE ser igual ao snapshot 1`] = `
+.c0 {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.c0:checked + Span {
+  left: 50%;
+  background: url(sun.svg);
+  background-size: cover;
+}
+
+<input
+  className="c0"
+/>
+`;
+
 exports[`ToggleSwitch.styles Span DEVE ser igual ao snapshot 1`] = `
 .c0 {
   position: absolute;
@@ -15,24 +33,6 @@ exports[`ToggleSwitch.styles Span DEVE ser igual ao snapshot 1`] = `
 }
 
 <span
-  className="c0"
-/>
-`;
-
-exports[`ToggleSwitch.styles SpanBack DEVE ser igual ao snapshot 1`] = `
-.c0 {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-.c0:checked + Span {
-  left: 50%;
-  background: url(sun.svg);
-  background-size: cover;
-}
-
-<input
   className="c0"
 />
 `;
