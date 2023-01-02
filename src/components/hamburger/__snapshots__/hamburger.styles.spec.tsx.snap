@@ -1,39 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Hamburger.styles Container DEVE ser igual ao snapshot se mobile for igual a "false" 1`] = `
+exports[`Hamburger.styles Container DEVE ser igual ao snapshot 1`] = `
 .c0 {
   display: none;
-  position: fixed;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-flex-flow: row nowrap;
-  -ms-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-  width: 2.125rem;
-  height: 2.125rem;
-  right: 0;
-  margin-right: 2.125rem;
-  margin-top: 40px;
-  border: none;
-  outline: none;
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 20;
-}
-
-<button
-  className="c0"
-/>
-`;
-
-exports[`Hamburger.styles Container DEVE ser igual ao snapshot se mobile for igual a "true" 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   position: fixed;
   -webkit-box-pack: space-around;
   -webkit-justify-content: space-around;
@@ -52,6 +21,15 @@ exports[`Hamburger.styles Container DEVE ser igual ao snapshot se mobile for igu
   background-color: transparent;
   cursor: pointer;
   z-index: 20;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 <button

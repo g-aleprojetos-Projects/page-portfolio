@@ -1,7 +1,7 @@
 import React, {createContext, ReactNode, useContext, useState} from 'react';
 
 type BackgroundContext = {
-  background: boolean;
+  temaEscuro: boolean;
   handleToggle: () => void;
 };
 
@@ -9,15 +9,15 @@ type BackgroundProvider = {
   children: ReactNode;
 };
 
-const BackgroundContext = createContext({} as BackgroundContext);
+export const BackgroundContext = createContext({} as BackgroundContext);
 
 export const BackgroundProvide = ({children}: BackgroundProvider) => {
-  const [background, setBackground] = useState(false);
+  const [dark, setDark] = useState(false);
 
-  const handleToggle = () => setBackground(prev => !prev);
+  const handleToggle = () => setDark(prev => !prev);
 
   return (
-    <BackgroundContext.Provider value={{background, handleToggle}}>
+    <BackgroundContext.Provider value={{temaEscuro: dark, handleToggle}}>
       {children}
     </BackgroundContext.Provider>
   );

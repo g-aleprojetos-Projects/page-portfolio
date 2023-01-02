@@ -11,6 +11,6 @@ export const Container = styled.div`
 `;
 
 export const Imagem = styled(SVG)`
-  width: ${sizes.px610};
-  height: ${sizes.px610};
+  width: ${sizes.px377};
+  height: ${sizes.px377};
 `;

@@ -22,6 +22,7 @@ export const ToggleSwitchWrapper = styled.label<PropsToggle>`
   background: url(${props => (props.isOn ? backGroundSun : backGroundMoon)});
   background-size: cover;
 `;
+
 export const Span = styled.span`
   position: absolute;
   width: 2rem;

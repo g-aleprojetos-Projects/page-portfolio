@@ -5,17 +5,20 @@ import flagBrasil from 'assets/icon/flagBrasil.svg';
 
 export interface PropsRightNav {
   openRightNav?: boolean;
-  mobile?: boolean;
   backgroundDark?: boolean;
   isActive?: boolean;
 }
 
 export const Container = styled.div`
-  display: flex;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
+  display: 'none';
+
+  @media screen and (max-width: ${sizes.media_768}) {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
 `;
 
 export const ContainerNav = styled.nav`
@@ -29,52 +32,74 @@ export const ContainerNav = styled.nav`
 export const ContainerContent = styled.ul<PropsRightNav>`
   display: flex;
   align-items: center;
-  flex-flow: ${props => (props.mobile ? 'column nowrap' : 'row nowrap')};
-  position: ${props => (props.mobile ? 'fixed' : 'static')};
-  background-color: ${props => (props.mobile ? colors.black : 'transparent')};
-  transform: ${props =>
-    props.mobile
-      ? props.openRightNav
-        ? 'translateX(0)'
-        : 'translateX(100%)'
-      : 'none'};
-  top: ${props => (props.mobile ? '0' : 'auto')};
-  right: ${props => (props.mobile ? '0' : 'auto')};
-  width: ${props => (props.mobile ? '100vw' : 'auto')};
+  flex-flow: row nowrap;
+  position: static;
+  background-color: 'transparent';
+  transform: 'none';
+  top: 'auto';
+  right: 'auto';
+  width: 'auto';
   height: auto;
-  padding-top: ${props => (props.mobile ? '3.5rem' : 'auto')};
-  transition: ${props =>
-    props.mobile ? 'transform 0.3s ease-in-out' : 'none'};
+  padding-top: 'auto';
+  transition: 'none';
+
+  @media screen and (max-width: ${sizes.media_768}) {
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    background-color: ${colors.black};
+    transform: ${props =>
+      props.openRightNav ? 'translateX(0)' : 'translateX(100%)'};
+    top: 0;
+    right: 0;
+    width: 100vw;
+    padding-top: 3.5rem;
+    transition: 'transform 0.3s ease-in-out';
+  }
 `;
 
 export const Texto = styled.div`
   color: ${colors.white};
 `;
 
-export const Menu = styled.div<PropsRightNav>`
-  display: ${props => (props.mobile ? 'flex' : 'none')};
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 20px 0;
-  margin-bottom: 10px;
-  background-color: ${colors.tropicalRainForest};
+export const Menu = styled.div`
+  display: none;
+
+  @media screen and (max-width: ${sizes.media_768}) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    margin-bottom: 10px;
+    background-color: ${colors.tropicalRainForest};
+  }
 `;
 
 export const Item = styled.li<PropsRightNav>`
   display: flex;
   justify-content: center;
-  padding: ${props => (props.mobile ? `${sizes.px8} 0` : sizes.px8)};
+  padding: ${sizes.px8}px;
   margin: ${sizes.px5} ${sizes.px21};
   color: ${colors.white};
+
+  @media screen and (max-width: ${sizes.media_768}) {
+    padding: ${sizes.px8}px 0;
+  }
 `;
 
 export const ItemNav = styled(Item)`
   width: 80%;
   cursor: ${props => (props.isActive ? 'default' : 'pointer')};
   :hover {
-    background-color: ${props =>
-      props.mobile ? (props.isActive ? 'none' : colors.blueMagenta) : 'none'};
+    background-color: 'none';
+  }
+
+  @media screen and (max-width: ${sizes.media_768}) {
+    :hover {
+      background-color: ${props =>
+        props.isActive ? 'none' : colors.blueMagenta};
+    }
   }
 `;
 

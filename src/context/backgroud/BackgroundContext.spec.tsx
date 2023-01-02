@@ -18,7 +18,7 @@ describe('BackgroundContext', () => {
   test('DEVE ter o estado mobile igual a false', () => {
     const {result} = renderHook(() => useBackgroundContext(), {wrapper});
 
-    expect(result.current.background).toBeFalsy();
+    expect(result.current.temaEscuro).toBeFalsy();
   });
 
   test('DEVE ter o estado mobile igual a false', async () => {
@@ -28,6 +28,6 @@ describe('BackgroundContext', () => {
       result.current.handleToggle();
     });
 
-    expect(result.current.background).toBe(true);
+    expect(result.current.temaEscuro).toBe(true);
   });
 });
