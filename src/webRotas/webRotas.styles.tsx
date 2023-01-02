@@ -12,5 +12,5 @@ export const Container = styled.div<Props>`
   width: 100vw;
   height: 100vh;
   background-color: ${props =>
-    props.backgroundBlack ? colors.magenta : colors.lightgray};
+    props.backgroundBlack ? colors.fundoEscuro : colors.lightgray};
 `;

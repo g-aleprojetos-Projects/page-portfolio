@@ -8,4 +8,5 @@ export default {
   black: '#000000',
   black50per: '#00000080',
   backRussian: '#202024',
+  fundoEscuro: '#202024',
 };
