@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/page-portfolio/static/css/main.00a178ef.css",
-    "main.js": "/page-portfolio/static/js/main.ed0b4f27.js",
+    "main.js": "/page-portfolio/static/js/main.53187772.js",
     "static/media/video.mp4": "/page-portfolio/static/media/video.e00e150549daf600330d.mp4",
     "static/media/manutencao.svg": "/page-portfolio/static/media/manutencao.8879956a312017a106a09e808c90eb2a.svg",
     "static/media/AvertaStd-Regular.ttf": "/page-portfolio/static/media/AvertaStd-Regular.bff500d7e76a1dab42d1.ttf",
     "static/media/AvertaStd-Bold.ttf": "/page-portfolio/static/media/AvertaStd-Bold.035345d433cff7977a3f.ttf",
-    "static/media/flagBrasil.svg": "/page-portfolio/static/media/flagBrasil.e0fcf8cf1f89940329cbdc5ccbf3a7e9.svg",
+    "static/media/logo.svg": "/page-portfolio/static/media/logo.5e2e0b931bc792d8073531f49453f605.svg",
     "static/media/stars.svg": "/page-portfolio/static/media/stars.79604b209c26576b45de712d4d92b5f6.svg",
     "static/media/moon.svg": "/page-portfolio/static/media/moon.b349789a93af60e19a07bce61d7b65a7.svg",
+    "static/media/flagBrasil.svg": "/page-portfolio/static/media/flagBrasil.4bb66eacc2202e7e05bab301d7593e0a.svg",
     "static/media/sun.svg": "/page-portfolio/static/media/sun.72585868b4dc5ffa49d31ea6ae3f339c.svg",
     "index.html": "/page-portfolio/index.html",
     "static/media/backgroundSun.svg": "/page-portfolio/static/media/backgroundSun.38ae5b4b92a735dd5043e28d7989f3c4.svg",
     "static/media/backgroundMoon.svg": "/page-portfolio/static/media/backgroundMoon.a4e58bc07bf486e42504c5509be815b6.svg",
     "static/media/clouds.svg": "/page-portfolio/static/media/clouds.36e1c78e91de229bf5a7c93d1b1427c5.svg",
     "main.00a178ef.css.map": "/page-portfolio/static/css/main.00a178ef.css.map",
-    "main.ed0b4f27.js.map": "/page-portfolio/static/js/main.ed0b4f27.js.map"
+    "main.53187772.js.map": "/page-portfolio/static/js/main.53187772.js.map"
   },
   "entrypoints": [
     "static/css/main.00a178ef.css",
-    "static/js/main.ed0b4f27.js"
+    "static/js/main.53187772.js"
   ]
 }
